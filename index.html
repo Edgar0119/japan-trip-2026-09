@@ -241,6 +241,24 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .info-map-figure::after{content:"⤢";position:absolute;top:8px;right:8px;width:26px;height:26px;border-radius:50%;background:rgba(0,0,0,0.45);color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);opacity:0.85;transition:opacity 0.2s,background 0.2s}
 .info-map-figure:hover::after{opacity:1;background:rgba(0,0,0,0.6)}
 .info-map-body{padding:14px 16px 16px}
+.route-map{background:var(--route-bg);border-bottom:1px solid var(--border-soft);padding:18px 16px 12px}
+.route-map-head{display:flex;justify-content:space-between;align-items:baseline;font-size:9px;font-weight:700;letter-spacing:2.5px;color:var(--route-text-soft);text-transform:uppercase;margin-bottom:10px}
+.route-map-wrap{position:relative;width:100%;aspect-ratio:1604/1296;border-radius:6px;overflow:hidden}
+.route-map-wrap img{width:100%;height:100%;display:block;object-fit:cover}
+.route-map-wrap [data-theme="dark"] img,[data-theme="dark"] .route-map-wrap img{filter:brightness(0.78) saturate(0.92)}
+.route-map-overlay{position:absolute;inset:0;width:100%;height:100%}
+.route-map-overlay .route{fill:none;stroke:#7c2d12;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.route-map-overlay .route-dash{fill:none;stroke:#7c2d12;stroke-width:4;stroke-linecap:round;stroke-dasharray:11 9}
+.route-map-overlay .node{fill:#7c2d12;stroke:#fff;stroke-width:4}
+.route-map-overlay .node-end{fill:#1a1a1a;stroke:#fff;stroke-width:4}
+.route-map-overlay .ring{fill:none;stroke:#7c2d12;stroke-width:3}
+.route-map-overlay .place{font-size:34px;font-weight:700;fill:var(--route-text);paint-order:stroke;stroke:var(--route-bg);stroke-width:7;stroke-linejoin:round}
+.route-map-overlay .place-sm{font-size:26px;font-weight:600;fill:var(--route-text);paint-order:stroke;stroke:var(--route-bg);stroke-width:6;stroke-linejoin:round}
+.route-map-overlay .day-label{font-size:22px;font-weight:700;fill:#7c2d12;letter-spacing:1px;paint-order:stroke;stroke:var(--route-bg);stroke-width:5;stroke-linejoin:round}
+[data-theme="dark"] .route-map-overlay .route,[data-theme="dark"] .route-map-overlay .route-dash,[data-theme="dark"] .route-map-overlay .node,[data-theme="dark"] .route-map-overlay .ring{stroke:#e8a36a}
+[data-theme="dark"] .route-map-overlay .node,[data-theme="dark"] .route-map-overlay .node-end{stroke:#1a2230}
+[data-theme="dark"] .route-map-overlay .node{fill:#e8a36a}
+[data-theme="dark"] .route-map-overlay .day-label{fill:#e8a36a}
 .info-map-kicker{font-size:10px;color:var(--hero-kicker);letter-spacing:2.5px;font-weight:600;text-transform:uppercase;margin-bottom:5px;display:flex;align-items:center;gap:8px}
 .info-map-kicker::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--hero-kicker-line),transparent)}
 .info-map-name{font-family:"Noto Serif TC","Source Han Serif TC","STSong","Songti TC",serif;font-size:17px;font-weight:600;color:var(--text);letter-spacing:0.3px;line-height:1.35;margin-bottom:5px}
@@ -331,6 +349,57 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
       <span>11 天 10 夜</span>
     </div>
+  </div>
+</div>
+
+<div class="route-map">
+  <div class="route-map-head">
+    <span>JAPAN · ROUTE</span>
+    <span>11 DAYS · 9/24 – 10/4</span>
+  </div>
+  <div class="route-map-wrap">
+    <img src="images/jp-route-base.jpg" alt="日本中部行程地圖">
+    <svg class="route-map-overlay" viewBox="0 0 1604 1296" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+      <path class="route" d="M 248,978 Q 285,920 328,860"/>
+      <path class="route-dash" d="M 320,832 Q 240,760 248,672"/>
+      <path class="route" d="M 340,830 Q 460,640 580,440 Q 610,360 618,325"/>
+      <path class="route" d="M 630,320 Q 720,400 790,450"/>
+      <path class="route" d="M 800,460 Q 870,440 900,425"/>
+      <path class="route" d="M 905,408 Q 902,365 903,332"/>
+      <path class="route" d="M 918,322 Q 955,335 985,353"/>
+      <path class="route" d="M 1010,365 Q 1200,480 1380,640"/>
+      <path class="route-dash" d="M 1400,665 Q 1500,800 1580,1000"/>
+      <path class="route-dash" d="M 50,1160 Q 130,1090 235,1000"/>
+      <circle class="node-end" cx="245" cy="993" r="14"/>
+      <circle class="node" cx="331" cy="847" r="18"/>
+      <circle class="ring" cx="331" cy="847" r="29"/>
+      <circle class="node" cx="245" cy="652" r="13"/>
+      <circle class="node" cx="621" cy="309" r="18"/>
+      <circle class="node" cx="792" cy="467" r="15"/>
+      <circle class="node" cx="906" cy="416" r="14"/>
+      <circle class="node" cx="903" cy="320" r="17"/>
+      <circle class="ring" cx="903" cy="320" r="28"/>
+      <circle class="node" cx="995" cy="358" r="14"/>
+      <circle class="node-end" cx="1391" cy="652" r="18"/>
+      <text class="place-sm" x="225" y="1035" text-anchor="end">關西機場</text>
+      <text class="day-label" x="225" y="1062" text-anchor="end">D1</text>
+      <text class="place" x="370" y="843" text-anchor="start">京都</text>
+      <text class="day-label" x="370" y="873" text-anchor="start">D1–3</text>
+      <text class="place-sm" x="222" y="645" text-anchor="end">天橋立</text>
+      <text class="day-label" x="222" y="672" text-anchor="end">D3</text>
+      <text class="place" x="662" y="305" text-anchor="start">金澤</text>
+      <text class="day-label" x="662" y="335" text-anchor="start">D4</text>
+      <text class="place-sm" x="773" y="513" text-anchor="middle">新穗高</text>
+      <text class="day-label" x="773" y="540" text-anchor="middle">D5</text>
+      <text class="place-sm" x="945" y="465" text-anchor="start">界 阿爾卑斯</text>
+      <text class="day-label" x="945" y="492" text-anchor="start">D6</text>
+      <text class="place" x="940" y="318" text-anchor="start">白馬</text>
+      <text class="day-label" x="940" y="348" text-anchor="start">D7–8</text>
+      <text class="place-sm" x="1035" y="355" text-anchor="start">長野</text>
+      <text class="day-label" x="1035" y="382" text-anchor="start">D9</text>
+      <text class="place" x="1350" y="645" text-anchor="end">東京</text>
+      <text class="day-label" x="1350" y="675" text-anchor="end">D10–11</text>
+    </svg>
   </div>
 </div>
 
