@@ -197,6 +197,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .cal-split-alps-tsugaike{background:linear-gradient(135deg,#b45309 0 30%,#ca8a04 30% 100%);position:relative}
 .cal-return{background:#475569}
 .cal-split-taipei-kyoto{background:linear-gradient(135deg,#be123c 0 70%,#1e3a8a 70% 100%);position:relative}
+.cal-split-tokyo-taipei{background:linear-gradient(135deg,#7c3aed 0 70%,#be123c 70% 100%);position:relative}
 .cal-split-kyoto-taipei{background:linear-gradient(135deg,#1e3a8a 0 70%,#be123c 70% 100%);position:relative}
 .cal-split-kyoto-kanazawa{background:linear-gradient(135deg,#1e3a8a 0 30%,#0d9488 30% 100%);position:relative}
 .cal-split-kanazawa-kyoto{background:linear-gradient(135deg,#0d9488 0 30%,#1e3a8a 30% 100%);position:relative}
@@ -372,7 +373,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     <a href="#day-oct-2" class="cal-day cal-split-nagano-tokyo"><span class="cal-corner-tl">長野</span><div class="cal-date">2</div><div class="cal-loc">東京</div></a>
     <a href="#day-oct-3" class="cal-day cal-tokyo"><div class="cal-date">3</div><div class="cal-loc">東京</div></a>
 
-    <a href="#day-oct-4" class="cal-day cal-return"><div class="cal-date">4</div><div class="cal-loc">賦歸</div></a>
+    <a href="#day-oct-4" class="cal-day cal-split-tokyo-taipei"><span class="cal-corner">台北</span><div class="cal-date">4</div><div class="cal-loc">羽田</div></a>
   </div>
 </div>
 
@@ -1617,14 +1618,46 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
   <div class="day-header">
     <div class="day-num"><div class="date">10/4</div><div class="dow">日</div></div>
     <div class="day-info">
-      <h2>回到台北</h2>
-      <div class="theme">賦歸</div>
+      <h2>羽田 → 台北</h2>
+      <div class="theme">賦歸 · 長榮 BR189</div>
     </div>
-    <div class="weather-badge" data-empty data-date="2026-10-04" data-lat="" data-lon="" data-loc="TBD"><div class="wb-row"><span class="wb-loc">TBD</span><span><span class="wb-main">—</span></span></div></div>
+    <div class="weather-badge" data-empty data-date="2026-10-04" data-lat="25.0337" data-lon="121.5654" data-loc="台北"><div class="wb-row"><span class="wb-loc">台北</span><span><span class="wb-main">—</span></span></div></div>
   </div>
-  <div class="tbd-spot">
-    📝 行程待安排<br>
-    <span style="font-size:11px">回程航班 / 機場接駁</span>
+
+  <div class="spot">
+    <div class="spot-time">早上</div>
+    <div class="spot-body">
+      <div class="spot-name">🚆 飯店退房 · 出發羽田機場</div>
+      <div class="spot-desc">建議起飛前 2.5 小時抵達 HND(約 08:20 到機場)· 京急電鐵 / 利木津巴士都可達</div>
+    </div>
+  </div>
+
+  <div class="flight-card">
+    <div class="flight-header">
+      <div class="flight-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+      </div>
+      <div>
+        <div class="flight-title">長榮航空 BR189</div>
+        <div style="font-size:11px;color:var(--text-soft);margin-top:1px">飛行 2h40m</div>
+      </div>
+    </div>
+    <div class="flight-route">
+      <div class="flight-endpoint">
+        <div class="flight-airport">HND · 東京羽田</div>
+        <div class="flight-time-large">10:50</div>
+      </div>
+      <div class="flight-arrow">✈</div>
+      <div class="flight-endpoint" style="text-align:right">
+        <div class="flight-airport">TSA · 台北松山</div>
+        <div class="flight-time-large">13:30</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <strong>🎉 旅程結束</strong>
+    11 天 10 夜的家族旅遊圓滿結束 · 京都 → 金澤 → 北阿爾卑斯 → 白馬 → 長野 → 東京,謝謝大家!
   </div>
 </div>
 
