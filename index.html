@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本 11 日遊 · 9/24 – 10/4</title>
+<style>
+:root{
+  --bg:#f5f3ee;
+  --surface:#fff;
+  --surface-2:#fafafa;
+  --text:#1a1a1a;
+  --text-soft:#666;
+  --text-mute:#999;
+  --border:#e8e6df;
+  --border-soft:#eae8e0;
+  --primary:#3b6db8;
+  --primary-2:#5a8fd6;
+  --time-bg:#f0ede4;
+  --time-fg:#5a4f2e;
+  --nav-bg:#e8f0fe;
+  --nav-fg:#1967d2;
+  --nav-border:#d2e3fc;
+  --nav-active:#d2e3fc;
+  --stay-bg:#fce8e8;
+  --stay-fg:#c2410c;
+  --stay-border:#fbd5d5;
+  --stay-active:#fbd5d5;
+  --tip-bg:#fef9e7;
+  --tip-bar:#f4c430;
+  --tip-fg:#7a5d12;
+  --flight-bg:#f0f4ff;
+  --flight-border:#c7d2fe;
+  --flight-icon-bg:#4338ca;
+  --flight-title:#312e81;
+  --flight-airport:#4338ca;
+  --flight-arrow:#818cf8;
+  --tbd-bg:#fafafa;
+  --tbd-border:#d4d4d4;
+  --tbd-fg:#999;
+  --hero-tag-bg:rgba(255,255,255,0.92);
+  --hero-body-border:#efece4;
+  --hero-kicker:#a89968;
+  --hero-kicker-line:#d4c98e;
+  --hero-card-shadow:rgba(30,40,60,0.08);
+  --container-shadow:rgba(0,0,0,0.04);
+  --float-fg:#fff;
+  --cal-opacity:1;
+  --color-scheme:light;
+  --route-bg:#f4f7fb;
+  --route-grid:#cdd5e0;
+  --route-text:#1a1a1a;
+  --route-text-soft:#5a6678;
+  --route-text-mute:#8b94a3;
+  --route-badge-bg:#fff;
+  --route-badge-border:#1a4d8f;
+  --route-badge-fg:#1a4d8f;
+}
+[data-theme="dark"]{
+  --bg:#0f1419;
+  --surface:#171c24;
+  --surface-2:#1e242d;
+  --text:#e8e4d8;
+  --text-soft:#9ba0a8;
+  --text-mute:#6a7180;
+  --border:#262b35;
+  --border-soft:#22272f;
+  --primary:#6da0e4;
+  --primary-2:#85b3ec;
+  --time-bg:#252a33;
+  --time-fg:#c9b577;
+  --nav-bg:#1d2935;
+  --nav-fg:#7fb3ff;
+  --nav-border:#2a3a4d;
+  --nav-active:#2a3a4d;
+  --stay-bg:#3a2420;
+  --stay-fg:#f4a07a;
+  --stay-border:#522e26;
+  --stay-active:#522e26;
+  --tip-bg:#2a2410;
+  --tip-bar:#d4b760;
+  --tip-fg:#d4b760;
+  --flight-bg:#1c2238;
+  --flight-border:#2d3858;
+  --flight-icon-bg:#5b54e0;
+  --flight-title:#b8b4f0;
+  --flight-airport:#a8a4ec;
+  --flight-arrow:#7c7cd0;
+  --tbd-bg:#1a1f27;
+  --tbd-border:#363c47;
+  --tbd-fg:#6a7180;
+  --hero-tag-bg:rgba(20,26,34,0.85);
+  --hero-body-border:#22272f;
+  --hero-kicker:#c9b577;
+  --hero-kicker-line:#5a4f2e;
+  --hero-card-shadow:rgba(0,0,0,0.4);
+  --container-shadow:rgba(0,0,0,0.5);
+  --cal-opacity:0.86;
+  --color-scheme:dark;
+  --route-bg:#1a2230;
+  --route-grid:#2e3a4d;
+  --route-text:#e8e4d8;
+  --route-text-soft:#8b94a3;
+  --route-text-mute:#5a6678;
+  --route-badge-bg:#2a3548;
+  --route-badge-border:#6da0e4;
+  --route-badge-fg:#a8c8f0;
+}
+html{color-scheme:var(--color-scheme)}
+body,.container,.spot,.hero-stay,.flight-card,.tbd-spot,.hero-stay-body,.divider,.footer{transition:background-color 0.4s ease,border-color 0.4s ease,color 0.4s ease,box-shadow 0.4s ease}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;overflow-x:clip;overscroll-behavior-x:none}
+.day{scroll-margin-top:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:0;min-height:100vh;overflow-x:clip;overscroll-behavior-x:none;width:100%}
+.container{max-width:560px;margin:0 auto;background:var(--surface);min-height:100vh;box-shadow:0 0 20px var(--container-shadow)}
+.hero{padding:32px 20px 24px;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-2) 100%);color:#fff}
+.hero h1{font-size:24px;font-weight:600;letter-spacing:-0.5px;line-height:1.3}
+.hero .sub{font-size:14px;opacity:0.9;margin-top:6px}
+.hero .meta{display:flex;gap:16px;margin-top:16px;font-size:13px;opacity:0.95;flex-wrap:wrap}
+.hero .meta-item{display:flex;align-items:center;gap:5px}
+.day{padding:20px 16px 8px}
+.day-header{display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:50;background:var(--surface);padding:12px 16px;margin:0 -16px 16px;border-bottom:1px solid var(--border);backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);transition:background-color 0.4s ease,border-color 0.4s ease}
+.day-num{background:var(--primary);color:#fff;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;flex-shrink:0;line-height:1.1;text-align:center;flex-direction:column}
+.day-num .date{font-size:11px;font-weight:600}
+.day-num .dow{font-size:10px;opacity:0.9;margin-top:1px}
+.day-info{flex:1;min-width:0}
+.day-info h2{font-size:17px;font-weight:600;color:var(--text)}
+.day-info .theme{font-size:13px;color:var(--text-soft);margin-top:1px}
+.weather-badge{flex-shrink:0;line-height:1.35;letter-spacing:0.2px;font-variant-numeric:tabular-nums;max-width:240px}
+.weather-badge .wb-row{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.weather-badge .wb-loc{font-size:10px;color:var(--text-mute);font-weight:500;letter-spacing:0.5px;flex-shrink:0}
+.weather-badge .wb-main{font-size:14px;font-weight:600;color:var(--text)}
+.weather-badge .wb-label{font-size:11px;color:var(--text-soft);margin-left:5px;font-weight:500}
+.weather-badge .wb-rain-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin-top:5px;border:1px solid var(--border);border-radius:5px;overflow:hidden;background:var(--border)}
+.weather-badge .wb-rain-cell{background:var(--surface);padding:3px 1px 4px;text-align:center;line-height:1.15}
+.weather-badge .wb-rain-cell .wb-slot{display:block;font-size:7px;color:var(--text-mute);font-weight:500;letter-spacing:0.2px}
+.weather-badge .wb-rain-cell .wb-pct{display:block;font-size:10px;font-weight:600;color:var(--nav-fg);font-variant-numeric:tabular-nums;margin-top:1px}
+.weather-badge .wb-rain-cell.wb-pct-low .wb-pct{color:var(--text-mute)}
+.weather-badge .wb-rain-cell.wb-pct-mid .wb-pct{color:var(--nav-fg)}
+.weather-badge .wb-rain-cell.wb-pct-high .wb-pct{color:var(--stay-fg)}
+.weather-badge[data-empty] .wb-main{color:var(--text-mute);font-weight:500}
+.weather-badge[data-empty] .wb-rain-grid{display:none}
+.spot{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start}
+.spot-time{background:var(--time-bg);color:var(--time-fg);font-size:11px;font-weight:600;padding:4px 8px;border-radius:6px;flex-shrink:0;letter-spacing:0.3px;min-width:56px;text-align:center}
+.spot-body{flex:1;min-width:0}
+.spot-name{font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px}
+.spot-desc{font-size:13px;color:var(--text-soft);line-height:1.55;margin-bottom:8px}
+.btn-row{display:flex;gap:6px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:4px;padding:6px 11px;border-radius:18px;font-size:12px;font-weight:500;text-decoration:none;border:1px solid transparent;transition:all 0.15s}
+.btn-nav{background:var(--nav-bg);color:var(--nav-fg);border-color:var(--nav-border)}
+.btn-nav:active{background:var(--nav-active)}
+.btn-stay{background:var(--stay-bg);color:var(--stay-fg);border-color:var(--stay-border)}
+.btn-stay:active{background:var(--stay-active)}
+.btn svg{width:12px;height:12px;flex-shrink:0}
+.tip{background:var(--tip-bg);border-left:3px solid var(--tip-bar);padding:10px 14px;margin:8px 0 16px;border-radius:0 8px 8px 0;font-size:13px;color:var(--tip-fg);line-height:1.5}
+.tip strong{font-weight:600;display:block;margin-bottom:2px}
+.divider{height:8px;background:var(--bg);margin:0 -16px}
+.footer{padding:24px 20px;text-align:center;background:var(--bg);font-size:12px;color:var(--text-mute)}
+.footer .heart{color:#e57373}
+.flight-card{background:var(--flight-bg);border:1px solid var(--flight-border);border-radius:12px;padding:14px;margin-bottom:10px}
+.flight-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.flight-icon{background:var(--flight-icon-bg);color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.flight-icon svg{width:16px;height:16px}
+.flight-title{font-size:14px;font-weight:600;color:var(--flight-title)}
+.flight-route{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:6px}
+.flight-endpoint{flex:1;min-width:0}
+.flight-airport{font-size:13px;color:var(--flight-airport);font-weight:600}
+.flight-time-large{font-size:18px;color:var(--flight-title);font-weight:700;margin-top:2px}
+.flight-arrow{color:var(--flight-arrow);font-size:14px;flex-shrink:0}
+.tbd-spot{background:var(--tbd-bg);border:1px dashed var(--tbd-border);border-radius:12px;padding:14px;margin-bottom:10px;text-align:center;color:var(--tbd-fg);font-size:13px;font-style:italic}
+.calendar{padding:20px 16px;border-bottom:1px solid var(--border-soft)}
+.calendar + .calendar{padding-top:8px}
+.cal-title{font-size:14px;font-weight:600;color:var(--text-soft);margin-bottom:10px;text-align:center;letter-spacing:0.5px}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-head{font-size:11px;color:var(--text-mute);text-align:center;padding:4px 0;font-weight:500}
+.cal-empty{aspect-ratio:1}
+.cal-day{aspect-ratio:1;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;color:#fff;padding:2px;transition:transform 0.15s,opacity 0.4s ease;opacity:var(--cal-opacity)}
+.cal-day:active{transform:scale(0.95)}
+.cal-date{font-size:15px;font-weight:700;line-height:1}
+.cal-loc{font-size:10px;opacity:0.95;margin-top:3px;line-height:1.1;text-align:center}
+.cal-tbd{background:#94a3b8}
+.cal-haneda{background:#64748b}
+.cal-tokyo{background:#7c3aed}
+.cal-osaka{background:#16a34a}
+.cal-kix{background:#0d9488}
+.cal-kyoto{background:#1e3a8a}
+.cal-kanazawa{background:#0d9488}
+.cal-nishiho{background:#064e3b}
+.cal-alps{background:#b45309}
+.cal-tsugaike{background:#ca8a04}
+.cal-happo{background:#0369a1}
+.cal-nagano{background:#be185d}
+.cal-split-hakuba-nagano{background:linear-gradient(135deg,#ca8a04 0 70%,#be185d 70% 100%);position:relative}
+.cal-split-nagano-tokyo{background:linear-gradient(135deg,#be185d 0 30%,#7c3aed 30% 100%);position:relative}
+.cal-split-kanazawa-nishiho{background:linear-gradient(135deg,#0d9488 0 30%,#064e3b 30% 100%);position:relative}
+.cal-split-nishiho-alps{background:linear-gradient(135deg,#064e3b 0 30%,#b45309 30% 100%);position:relative}
+.cal-split-alps-tsugaike{background:linear-gradient(135deg,#b45309 0 30%,#ca8a04 30% 100%);position:relative}
+.cal-return{background:#475569}
+.cal-split-taipei-kyoto{background:linear-gradient(135deg,#be123c 0 70%,#1e3a8a 70% 100%);position:relative}
+.cal-split-kyoto-taipei{background:linear-gradient(135deg,#1e3a8a 0 70%,#be123c 70% 100%);position:relative}
+.cal-split-kyoto-kanazawa{background:linear-gradient(135deg,#1e3a8a 0 30%,#0d9488 30% 100%);position:relative}
+.cal-split-kanazawa-kyoto{background:linear-gradient(135deg,#0d9488 0 30%,#1e3a8a 30% 100%);position:relative}
+.cal-corner{position:absolute;bottom:4px;right:5px;font-size:9px;line-height:1;font-weight:500}
+.cal-corner-tl{position:absolute;top:4px;left:5px;font-size:9px;line-height:1;font-weight:500}
+.hero-stay{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:10px;position:relative;isolation:isolate;transition:transform 0.3s ease,box-shadow 0.3s ease,background-color 0.4s ease,border-color 0.4s ease}
+.hero-stay:hover{transform:translateY(-2px);box-shadow:0 8px 24px var(--hero-card-shadow)}
+.hero-stay-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0b1220}
+.hero-stay-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s cubic-bezier(0.2,0.6,0.2,1),filter 0.6s ease;filter:saturate(1.05)}
+.hero-stay:hover .hero-stay-media img{transform:scale(1.04);filter:saturate(1.15) brightness(1.03)}
+.hero-stay-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,32,0.55) 0%,rgba(11,18,32,0) 28%,rgba(11,18,32,0) 60%,rgba(11,18,32,0.45) 100%);pointer-events:none}
+.hero-stay-tag{position:absolute;top:12px;left:12px;background:var(--hero-tag-bg);color:var(--primary);font-size:10px;font-weight:700;letter-spacing:1.5px;padding:5px 9px;border-radius:3px;text-transform:uppercase;z-index:2;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.hero-stay-onsen{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#c2410c 0%,#e85a2c 100%);color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;padding:5px 10px 5px 8px;border-radius:3px;z-index:3;display:inline-flex;align-items:center;gap:5px;box-shadow:0 2px 8px rgba(194,65,12,0.45);text-transform:none}
+.hero-stay-onsen::before{content:"♨";font-size:15px;line-height:1;font-weight:400;text-shadow:0 1px 2px rgba(0,0,0,0.25)}
+.hero-stay-onsen + .hero-stay-vert{display:none}
+.hero-stay-vert{position:absolute;top:14px;right:14px;color:rgba(255,255,255,0.85);font-size:9px;font-weight:500;letter-spacing:3px;writing-mode:vertical-rl;text-orientation:upright;z-index:2;font-feature-settings:"palt"}
+.hero-stay-corner{position:absolute;left:12px;bottom:12px;color:rgba(255,255,255,0.95);font-size:10px;letter-spacing:1px;z-index:2;font-weight:500;display:flex;align-items:center;gap:6px}
+.hero-stay-corner::before{content:"";width:14px;height:1px;background:rgba(255,255,255,0.9)}
+.hero-stay-meta{position:absolute;right:14px;bottom:12px;color:#fff;font-size:10px;letter-spacing:0.5px;z-index:2;text-align:right;line-height:1.4;text-shadow:0 1px 4px rgba(0,0,0,0.4)}
+.hero-stay-meta strong{display:block;font-size:11px;font-weight:600;letter-spacing:1px;opacity:0.95}
+.hero-stay-body{padding:14px 16px 16px;display:flex;gap:14px;align-items:center;justify-content:space-between;border-top:1px solid var(--hero-body-border)}
+.hero-stay-info{flex:1;min-width:0}
+.hero-stay-kicker{font-size:10px;color:var(--hero-kicker);letter-spacing:2.5px;font-weight:600;text-transform:uppercase;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.hero-stay-kicker::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--hero-kicker-line),transparent)}
+.hero-stay-name{font-family:"Noto Serif TC","Source Han Serif TC","STSong","Songti TC",serif;font-size:17px;font-weight:600;color:var(--text);letter-spacing:0.3px;line-height:1.35;margin-bottom:4px}
+.hero-stay-sub{font-size:12px;color:var(--text-soft);line-height:1.5}
+.hero-stay-cta{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;transition:background 0.2s,transform 0.2s}
+.hero-stay-cta svg{width:16px;height:16px}
+.hero-stay:hover .hero-stay-cta{filter:brightness(0.92);transform:translateX(2px)}
+.lightbox{position:fixed;inset:0;background:rgba(8,12,18,0.92);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;cursor:zoom-out;opacity:0;visibility:hidden;pointer-events:none;transition:opacity 0.25s ease,visibility 0.25s ease}
+.lightbox.is-open{opacity:1;visibility:visible;pointer-events:auto}
+.lightbox img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px;box-shadow:0 12px 40px rgba(0,0,0,0.6);user-select:none;-webkit-user-select:none;touch-action:pinch-zoom}
+.lightbox-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.12);color:#fff;border:none;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background 0.2s}
+.lightbox-close:hover{background:rgba(255,255,255,0.22)}
+.info-map{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:10px;transition:background-color 0.4s ease,border-color 0.4s ease,box-shadow 0.4s ease}
+.info-map-banner{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:linear-gradient(90deg,var(--time-bg),var(--surface));border-bottom:1px solid var(--border);font-size:10px;letter-spacing:2px;font-weight:600;text-transform:uppercase;color:var(--time-fg)}
+.info-map-banner .info-map-jp{font-family:"Noto Serif TC","Source Han Serif TC","STSong",serif;font-size:11px;letter-spacing:3px;font-weight:500;text-transform:none;opacity:0.85}
+.info-map-figure{display:block;background:#dceaf5;line-height:0;cursor:zoom-in;position:relative;overflow:hidden}
+.info-map-figure img{width:100%;height:auto;display:block;transition:transform 0.5s cubic-bezier(0.2,0.6,0.2,1)}
+.info-map-figure:hover img{transform:scale(1.02)}
+.info-map-figure::after{content:"⤢";position:absolute;top:8px;right:8px;width:26px;height:26px;border-radius:50%;background:rgba(0,0,0,0.45);color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);opacity:0.85;transition:opacity 0.2s,background 0.2s}
+.info-map-figure:hover::after{opacity:1;background:rgba(0,0,0,0.6)}
+.info-map-body{padding:14px 16px 16px}
+.info-map-kicker{font-size:10px;color:var(--hero-kicker);letter-spacing:2.5px;font-weight:600;text-transform:uppercase;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.info-map-kicker::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--hero-kicker-line),transparent)}
+.info-map-name{font-family:"Noto Serif TC","Source Han Serif TC","STSong","Songti TC",serif;font-size:17px;font-weight:600;color:var(--text);letter-spacing:0.3px;line-height:1.35;margin-bottom:5px}
+.info-map-sub{font-size:13px;color:var(--text-soft);line-height:1.55;margin-bottom:10px}
+.carousel{position:relative;margin:0 -16px 12px;background:#0b1220}
+.carousel-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.carousel-track::-webkit-scrollbar{display:none}
+.carousel-item{flex:0 0 100%;scroll-snap-align:start;position:relative;aspect-ratio:3/2;cursor:zoom-in;background:#0b1220}
+.carousel-item img{width:100%;height:100%;object-fit:cover;display:block;-webkit-user-drag:none;user-select:none}
+.carousel-caption{position:absolute;left:14px;bottom:14px;color:#fff;font-size:11px;letter-spacing:1px;line-height:1.35;text-shadow:0 1px 4px rgba(0,0,0,0.5);z-index:2;display:flex;align-items:center;gap:6px;font-weight:500}
+.carousel-caption::before{content:"";width:14px;height:1px;background:rgba(255,255,255,0.85)}
+.carousel-counter{position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.45);color:#fff;font-size:10px;font-weight:600;letter-spacing:1.5px;padding:4px 9px;border-radius:11px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:2;font-variant-numeric:tabular-nums}
+.carousel-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:1px;z-index:3;background:rgba(0,0,0,0.45);padding:1px 5px;border-radius:11px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.carousel-dot{width:20px;height:20px;border-radius:50%;background:transparent;border:none;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent;position:relative;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.carousel-dot::before{content:"";display:block;width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.55);transition:width 0.25s ease,background 0.25s ease,border-radius 0.25s ease}
+.carousel-dot.is-active::before{width:14px;border-radius:3px;background:#fff}
+.carousel-hint{position:absolute;left:14px;top:12px;color:rgba(255,255,255,0.92);font-size:9px;letter-spacing:2px;font-weight:600;text-transform:uppercase;z-index:2;background:rgba(0,0,0,0.45);padding:4px 8px;border-radius:3px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.hero-stay-collage{position:relative;aspect-ratio:16/10;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:2px;background:#0b1220;overflow:hidden}
+.hero-stay-collage > div{position:relative;overflow:hidden;cursor:zoom-in;background:#0b1220}
+.hero-stay-collage img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s cubic-bezier(0.2,0.6,0.2,1),filter 0.6s ease;filter:saturate(1.05)}
+.hero-stay-collage > div:hover img{transform:scale(1.04);filter:saturate(1.15) brightness(1.03)}
+.hero-stay-collage .collage-main{grid-column:1;grid-row:1 / span 2}
+.hero-stay-collage .collage-main img{object-position:center 35%}
+.hero-stay-collage .collage-tr{grid-column:2;grid-row:1}
+.hero-stay-collage .collage-br{grid-column:2;grid-row:2}
+.hero-stay-collage.four{grid-template-columns:1fr 1fr 1fr;grid-template-rows:2fr 1fr}
+.hero-stay-collage.four .collage-main{grid-column:1 / span 3;grid-row:1}
+.hero-stay-collage.four .collage-tr{grid-column:1;grid-row:2}
+.hero-stay-collage.four .collage-br{grid-column:2;grid-row:2}
+.hero-stay-collage.four .collage-b4{grid-column:3;grid-row:2;position:relative;overflow:hidden;cursor:zoom-in;background:#0b1220}
+.hero-stay-collage.four-vertical{grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr 1fr}
+.hero-stay-collage.four-vertical .collage-main{grid-column:1;grid-row:1 / span 3}
+.hero-stay-collage.four-vertical .collage-tr{grid-column:2;grid-row:1}
+.hero-stay-collage.four-vertical .collage-br{grid-column:2;grid-row:2}
+.hero-stay-collage.four-vertical .collage-b4{grid-column:2;grid-row:3;position:relative;overflow:hidden;cursor:zoom-in;background:#0b1220}
+.hero-stay-collage::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,32,0.55) 0%,rgba(11,18,32,0) 28%,rgba(11,18,32,0) 60%,rgba(11,18,32,0.45) 100%);pointer-events:none;z-index:1}
+.hero-stay-collage .hero-stay-tag,.hero-stay-collage .hero-stay-vert,.hero-stay-collage .hero-stay-corner,.hero-stay-collage .hero-stay-meta,.hero-stay-collage .hero-stay-onsen{z-index:2}
+.hero-stay-strip{margin:0;border-top:1px solid var(--hero-body-border);background:#0b1220;border-radius:0}
+.hero-stay-strip .carousel-item{aspect-ratio:16/10}
+.spot-collage{position:relative;aspect-ratio:16/10;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:2px;background:#0b1220;border-radius:10px;overflow:hidden;margin:6px 0 10px}
+.spot-collage > div{position:relative;overflow:hidden;cursor:zoom-in;background:#0b1220}
+.spot-collage img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s cubic-bezier(0.2,0.6,0.2,1),filter 0.5s ease;filter:saturate(1.05)}
+.spot-collage > div:hover img{transform:scale(1.04);filter:saturate(1.15) brightness(1.03)}
+.spot-collage .collage-main{grid-column:1;grid-row:1 / span 2}
+.spot-collage .collage-tr{grid-column:2;grid-row:1}
+.spot-collage .collage-br{grid-column:2;grid-row:2}
+.spot-collage .collage-main img{object-position:center 55%}
+.spot-collage-cap{position:absolute;left:8px;bottom:6px;color:#fff;font-size:10px;letter-spacing:0.5px;line-height:1.3;text-shadow:0 1px 3px rgba(0,0,0,0.5);z-index:2;font-weight:500;pointer-events:none}
+.spot-collage .collage-tr .spot-collage-cap,.spot-collage .collage-br .spot-collage-cap{font-size:9px}
+.theme-toggle{position:fixed;bottom:20px;right:20px;width:44px;height:44px;border-radius:50%;background:var(--surface);color:var(--text);display:flex;align-items:center;justify-content:center;border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,0.15);z-index:100;cursor:pointer;padding:0;transition:opacity 0.15s,background-color 0.4s ease,border-color 0.4s ease,transform 0.15s ease;opacity:0.55;-webkit-tap-highlight-color:transparent;-webkit-appearance:none;appearance:none;font:inherit;text-decoration:none}
+@media (min-width:600px){.theme-toggle{right:calc(50% - 280px + 20px)}}
+.theme-toggle:hover{opacity:1}
+.theme-toggle:active{transform:scale(0.92);opacity:1}
+.theme-toggle svg{width:20px;height:20px;transition:opacity 0.3s ease,transform 0.5s cubic-bezier(0.4,0,0.2,1)}
+.theme-toggle .icon-sun{display:block}
+.theme-toggle .icon-moon{display:none}
+[data-theme="dark"] .theme-toggle .icon-sun{display:none}
+[data-theme="dark"] .theme-toggle .icon-moon{display:block}
+.back-to-top{position:fixed;bottom:72px;right:20px;width:44px;height:44px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.15);z-index:100;transition:opacity 0.15s,background-color 0.4s ease;opacity:0.35;-webkit-tap-highlight-color:transparent}
+@media (min-width:600px){.back-to-top{right:calc(50% - 280px + 20px)}}
+.back-to-top:hover{opacity:0.9}
+.back-to-top:active{opacity:1}
+.back-to-top svg{width:20px;height:20px}
+@media (min-width:600px){
+  .container{margin-top:20px;margin-bottom:20px;border-radius:16px;min-height:auto}
+  .hero{border-radius:16px 16px 0 0}
+}
+</style>
+<script>
+(function(){
+  try{
+    var saved = localStorage.getItem("trip-2026-09-theme");
+    var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var theme = saved || (prefersDark ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  }catch(e){}
+})();
+</script>
+</head>
+<body>
+<div class="container">
+
+<div class="hero">
+  <h1>日本 11 日遊</h1>
+  <div class="sub">9/24 – 10/4 · 行程規劃中</div>
+  <div class="meta">
+    <div class="meta-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>11 天 10 夜</span>
+    </div>
+  </div>
+</div>
+
+<div class="calendar">
+  <div class="cal-title">September 2026</div>
+  <div class="cal-grid">
+    <div class="cal-head">日</div>
+    <div class="cal-head">一</div>
+    <div class="cal-head">二</div>
+    <div class="cal-head">三</div>
+    <div class="cal-head">四</div>
+    <div class="cal-head">五</div>
+    <div class="cal-head">六</div>
+
+    <div class="cal-empty"></div><div class="cal-empty"></div><div class="cal-empty"></div><div class="cal-empty"></div>
+    <a href="#day-24" class="cal-day cal-split-taipei-kyoto"><span class="cal-corner">京都</span><div class="cal-date">24</div><div class="cal-loc">桃機</div></a>
+    <a href="#day-25" class="cal-day cal-kyoto"><div class="cal-date">25</div><div class="cal-loc">京都</div></a>
+    <a href="#day-26" class="cal-day cal-kyoto"><div class="cal-date">26</div><div class="cal-loc">京都</div></a>
+
+    <a href="#day-27" class="cal-day cal-split-kyoto-kanazawa"><span class="cal-corner-tl">京都</span><div class="cal-date">27</div><div class="cal-loc">金澤</div></a>
+    <a href="#day-28" class="cal-day cal-split-kanazawa-nishiho"><span class="cal-corner-tl">金澤</span><div class="cal-date">28</div><div class="cal-loc">西穂</div></a>
+    <a href="#day-29" class="cal-day cal-split-nishiho-alps"><span class="cal-corner-tl">西穂</span><div class="cal-date">29</div><div class="cal-loc">界 阿爾卑斯</div></a>
+    <a href="#day-30" class="cal-day cal-split-alps-tsugaike"><span class="cal-corner-tl">界</span><div class="cal-date">30</div><div class="cal-loc">白馬</div></a>
+  </div>
+</div>
+
+<div class="calendar">
+  <div class="cal-title">October 2026</div>
+  <div class="cal-grid">
+    <div class="cal-head">日</div>
+    <div class="cal-head">一</div>
+    <div class="cal-head">二</div>
+    <div class="cal-head">三</div>
+    <div class="cal-head">四</div>
+    <div class="cal-head">五</div>
+    <div class="cal-head">六</div>
+
+    <div class="cal-empty"></div><div class="cal-empty"></div><div class="cal-empty"></div><div class="cal-empty"></div>
+    <a href="#day-oct-1" class="cal-day cal-split-hakuba-nagano"><span class="cal-corner">長野</span><div class="cal-date">1</div><div class="cal-loc">白馬</div></a>
+    <a href="#day-oct-2" class="cal-day cal-split-nagano-tokyo"><span class="cal-corner-tl">長野</span><div class="cal-date">2</div><div class="cal-loc">東京</div></a>
+    <a href="#day-oct-3" class="cal-day cal-tokyo"><div class="cal-date">3</div><div class="cal-loc">東京</div></a>
+
+    <a href="#day-oct-4" class="cal-day cal-return"><div class="cal-date">4</div><div class="cal-loc">賦歸</div></a>
+  </div>
+</div>
+
+<div class="day" id="day-24">
+  <div class="day-header">
+    <div class="day-num"><div class="date">9/24</div><div class="dow">四</div></div>
+    <div class="day-info">
+      <h2>桃機 → 京都</h2>
+      <div class="theme">關西機場入境 · 進京都</div>
+    </div>
+    <div class="weather-badge" data-empty data-date="2026-09-24" data-lat="34.4347" data-lon="135.2441" data-loc="關西機場"><div class="wb-row"><span class="wb-loc">關西機場</span><span><span class="wb-main">—</span></span></div></div>
+  </div>
+
+  <div class="flight-card">
+    <div class="flight-header">
+      <div class="flight-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+      </div>
+      <div>
+        <div class="flight-title">樂桃航空 MM026</div>
+        <div style="font-size:11px;color:var(--text-soft);margin-top:1px">飛行 2h45m</div>
+      </div>
+    </div>
+    <div class="flight-route">
+      <div class="flight-endpoint">
+        <div class="flight-airport">TPE · 桃園 T1</div>
+        <div class="flight-time-large">13:40</div>
+      </div>
+      <div class="flight-arrow">✈</div>
+      <div class="flight-endpoint" style="text-align:right">
+        <div class="flight-airport">KIX · 關西 T2</div>
+        <div class="flight-time-large">17:25</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tbd-spot" style="margin-bottom:14px">
+    📝 抵達後行程待安排<br>
+    <span style="font-size:11px">關西機場入境 / 利木津巴士 or HARUKA 進京都</span>
+  </div>
+
+  <a href="https://maps.app.goo.gl/vmJBYFQm1tpvzHRy7" class="hero-stay" target="_blank" rel="noopener">
+    <div class="hero-stay-collage">
+      <div class="collage-main" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-5ba3d7415b7e.jpg"><img src="images/img-5ba3d7415b7e.jpg" alt="OMO5 京都三條 入口夜景"></div>
+      <div class="collage-tr" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-3f5640160b05.jpg"><img src="images/img-3f5640160b05.jpg" alt="OMO5 京都三條 大廳吧檯"></div>
+      <div class="collage-br" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-71a37797a251.jpg"><img src="images/img-71a37797a251.jpg" alt="OMO5 京都三條 雙人房"></div>
+      <span class="hero-stay-tag">DAY 1–3 STAY</span>
+      <span class="hero-stay-vert">京都・三条</span>
+      <span class="hero-stay-corner">9/24 – 9/27 · 3 晚連泊</span>
+      <span class="hero-stay-meta"><strong>HOSHINO RESORTS</strong>OMO5 KYOTO SANJO</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">STAY · KYOTO</div>
+        <div class="hero-stay-name">OMO5 京都三條 by 星野集團</div>
+        <div class="hero-stay-sub">三條商店街旁 · 鴨川步行可達 · 適合徒步逛京都老城</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="divider"></div>
+
+<div class="day" id="day-25">
+  <div class="day-header">
+    <div class="day-num"><div class="date">9/25</div><div class="dow">五</div></div>
+    <div class="day-info">
+      <h2>京都</h2>
+      <div class="theme">自由活動</div>
+    </div>
+    <div class="weather-badge" data-empty data-date="2026-09-25" data-lat="35.0116" data-lon="135.7681" data-loc="京都"><div class="wb-row"><span class="wb-loc">京都</span><span><span class="wb-main">—</span></span></div></div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">自由</div>
+    <div class="spot-body">
+      <div class="spot-name">🗾 京都自由活動</div>
+      <div class="spot-desc">清水寺 / 嵐山 / 伏見稻荷 / 衹園 / 錦市場 / 鴨川散步 · 大家分組玩</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">入住</div>
+    <div class="spot-body">
+      <div class="spot-name">OMO5 京都三條 by 星野集團</div>
+      <div class="spot-desc">同前一晚</div>
+      <div class="btn-row">
+        <a class="btn btn-stay" href="https://maps.app.goo.gl/vmJBYFQm1tpvzHRy7" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          飯店位置
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="day" id="day-26">
+  <div class="day-header">
+    <div class="day-num"><div class="date">9/26</div><div class="dow">六</div></div>
+    <div class="day-info">
+      <h2>京都 · 天橋立一日遊</h2>
+      <div class="theme">包車 · 伊根舟屋 → 天橋立 → 丹後赤松</div>
+    </div>
+    <div class="weather-badge" data-empty data-date="2026-09-26" data-lat="35.5694" data-lon="135.1947" data-loc="天橋立"><div class="wb-row"><span class="wb-loc">天橋立</span><span><span class="wb-main">—</span></span></div></div>
+  </div>
+
+  <a class="hero-stay" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E6%A9%8B%E7%AB%8B" target="_blank" rel="noopener" aria-label="天橋立一日遊 · 開啟地圖">
+    <div class="hero-stay-collage">
+      <div class="collage-main" onclick="event.preventDefault();openLightbox(this)" data-full="images/amanohashidate.jpg"><img src="images/amanohashidate.jpg" alt="天橋立沙洲鳥瞰" loading="lazy"></div>
+      <div class="collage-tr" onclick="event.preventDefault();openLightbox(this)" data-full="images/tango-akamatsu.jpg"><img src="images/tango-akamatsu.jpg" alt="丹後赤松號 跨海鐵橋" loading="lazy"></div>
+      <div class="collage-br" onclick="event.preventDefault();openLightbox(this)" data-full="images/ine-funaya.jpg"><img src="images/ine-funaya.jpg" alt="伊根舟屋 · 海上町家" loading="lazy"></div>
+      <span class="hero-stay-tag">DAY TRIP · 包車</span>
+      <span class="hero-stay-vert">京都 → 丹後半島</span>
+      <span class="hero-stay-corner">INE · AMANOHASHIDATE · AKAMATSU</span>
+      <span class="hero-stay-meta"><strong>9月26日 土</strong>京都包車一日遊</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">DAY TRIP · 京都出發</div>
+        <div class="hero-stay-name">伊根舟屋・天橋立・丹後赤松</div>
+        <div class="hero-stay-sub">8 人包車 · 京都 → 伊根遊船看舟屋 → 天橋立 View Land 股のぞき → 搭丹後赤松觀光列車 → 西舞鶴轉包車回京都</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <div class="spot">
+    <div class="spot-time">08:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🚐 京都出發 · 包車直奔伊根灣</div>
+      <div class="spot-desc">從 OMO5 三條集合 · 包車走京都縱貫道,約 2 小時抵達伊根</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">~10:00</div>
+    <div class="spot-body">
+      <div class="spot-name">⛴️ 伊根舟屋 · 搭遊覽船看舟屋</div>
+      <div class="spot-desc">日本三大景之一 · 海上町家「舟屋」一樓直接停船、二樓住人。搭觀光船從海上看整排舟屋最有 fu</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E6%A0%B9%E3%81%AE%E8%88%9F%E5%B1%8B" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          伊根舟屋
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">11:30</div>
+    <div class="spot-body">
+      <div class="spot-name">🌊 天橋立 · 午餐 + 沙洲 + View Land</div>
+      <div class="spot-desc">日本三景之一 · 午餐後走沙洲(可選腳踏車)· 搭單軌纜車上「天橋立 View Land」(南側展望台),做經典「股のぞき」彎腰看飛龍觀</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://maps.app.goo.gl/Dikth4RoTq2reVxB7" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          天橋立 View Land
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="flight-card">
+    <div class="flight-header">
+      <div class="flight-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+      </div>
+      <div>
+        <div class="flight-title">丹後赤松號 4 號(末班)</div>
+        <div style="font-size:11px;color:var(--text-soft);margin-top:1px">京都丹後鉄道 · 觀光列車 · 跨海鐵橋 · 全車指定席</div>
+      </div>
+    </div>
+    <div class="flight-route">
+      <div class="flight-endpoint">
+        <div class="flight-airport">天橋立 AMANOHASHIDATE</div>
+        <div class="flight-time-large">14:48</div>
+      </div>
+      <div class="flight-arrow">🚂</div>
+      <div class="flight-endpoint" style="text-align:right">
+        <div class="flight-airport">西舞鶴 NISHI-MAIZURU</div>
+        <div class="flight-time-large">15:50</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">15:50</div>
+    <div class="spot-body">
+      <div class="spot-name">🚐 西舞鶴駅 · 司機接回京都</div>
+      <div class="spot-desc">下車後司機在站前接 · 上信越自動車道一路睡回京都市區,約 2 小時抵達</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E8%88%9E%E9%B6%B4%E9%A7%85" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          西舞鶴駅
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">~17:30</div>
+    <div class="spot-body">
+      <div class="spot-name">🏯 回到京都市區</div>
+      <div class="spot-desc">司機送回 OMO5 三條附近 · 稍作休息準備出發鴨川晚餐</div>
+    </div>
+  </div>
+
+  <a href="https://maps.app.goo.gl/gxv45HfwhaT8228S8" class="hero-stay" target="_blank" rel="noopener" aria-label="鴨川納涼床 · 壽喜燒 · 開啟地圖">
+    <div class="hero-stay-collage">
+      <div class="collage-main" onclick="event.preventDefault();openLightbox(this)" data-full="images/kamogawa-1.jpg"><img src="images/kamogawa-1.jpg" alt="鴨川納涼床 夕暮街景" loading="lazy"></div>
+      <div class="collage-tr" onclick="event.preventDefault();openLightbox(this)" data-full="images/kamogawa-2.jpg"><img src="images/kamogawa-2.jpg" alt="壽喜燒和牛" loading="lazy"></div>
+      <div class="collage-br" onclick="event.preventDefault();openLightbox(this)" data-full="images/kamogawa-3.jpg"><img src="images/kamogawa-3.jpg" alt="鴨川納涼床 榻榻米席" loading="lazy"></div>
+      <span class="hero-stay-tag">19:30 · 晚餐</span>
+      <span class="hero-stay-vert">鴨川納涼床</span>
+      <span class="hero-stay-corner">KAMOGAWA · KAWADOKO SUKIYAKI</span>
+      <span class="hero-stay-meta"><strong>9月26日 土</strong>京都・夏の風物詩</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">DINNER · 19:30</div>
+        <div class="hero-stay-name">鴨川納涼床 · 壽喜燒</div>
+        <div class="hero-stay-sub">京都夏季限定(5–9 月)的「川床」體驗 · 木造高架平台延伸到鴨川上,邊聽水聲邊吃壽喜燒 · 9 月底末班</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <div class="tip">
+    <strong>🎫 丹後赤松預約</strong>
+    丹後赤松觀光列車要事先預約(全車指定席,只有 4 班次,週末更搶手)。建議在 willer-travel.com 或丹後鉄道官網訂票
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">入住</div>
+    <div class="spot-body">
+      <div class="spot-name">OMO5 京都三條 by 星野集團</div>
+      <div class="spot-desc">同前一晚</div>
+      <div class="btn-row">
+        <a class="btn btn-stay" href="https://maps.app.goo.gl/vmJBYFQm1tpvzHRy7" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          飯店位置
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="day" id="day-27">
+  <div class="day-header">
+    <div class="day-num"><div class="date">9/27</div><div class="dow">日</div></div>
+    <div class="day-info">
+      <h2>京都 → 金澤</h2>
+      <div class="theme">雷鳥號 + 北陸新幹線</div>
+    </div>
+    <div class="weather-badge" data-empty data-date="2026-09-27" data-lat="36.578" data-lon="136.648" data-loc="金澤"><div class="wb-row"><span class="wb-loc">金澤</span><span><span class="wb-main">—</span></span></div></div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">08:00</div>
+    <div class="spot-body">
+      <div class="spot-name">OMO5 退房 → 京都駅</div>
+      <div class="spot-desc">地鐵東西線「京都市役所前」→ 烏丸御池轉烏丸線「京都」(約 12 分);拖行李建議直接搭計程車約 10 分、¥1,500 上下</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://www.google.com/maps/dir/?api=1&origin=OMO5+Kyoto+Sanjo&destination=Kyoto+Station&travelmode=transit" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          路線
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">~09:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🚄 特急 Thunderbird(雷鳥號)京都 → 敦賀</div>
+      <div class="spot-desc">京都駅 0 番線發車,約 1h20m 到敦賀。建議事前在 e5489 / JR West 網站劃位,週末容易客滿</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E9%A7%85" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          京都駅
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">~10:30</div>
+    <div class="spot-body">
+      <div class="spot-name">🚅 敦賀換乘 → 北陸新幹線 つるぎ/かがやき → 金澤</div>
+      <div class="spot-desc">2024 年起雷鳥號終點改為敦賀,要在敦賀站同站轉北陸新幹線,約 20 分鐘抵金澤。轉乘指示牌做得很清楚,跟著「新幹線のりかえ」走</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://www.google.com/maps/search/?api=1&query=%E6%95%A6%E8%B3%80%E9%A7%85" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          敦賀駅
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">~11:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🏯 抵達金澤駅 → 飯店寄行李</div>
+      <div class="spot-desc">金澤駅東口(鼓門那側)出來,Dormy Inn 金澤步行約 5 分鐘就到。check-in 通常 15:00,但可先寄行李、出去逛近江町市場或東茶屋街</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://www.google.com/maps/dir/?api=1&origin=%E9%87%91%E6%B2%A2%E9%A7%85&destination=Dormy+Inn+Kanazawa&travelmode=walking" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          金澤駅 → 飯店
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <strong>💡 票券小提醒</strong>
+    京都→金澤一張單程指定席約 ¥7,500(含敦賀換新幹線)。建議出發前一週用 SmartEX 或 e5489 線上劃位,週日早上的雷鳥號常客滿。
+  </div>
+
+  <a href="https://maps.app.goo.gl/j95GUYJZmroRDn439" class="hero-stay" target="_blank" rel="noopener">
+    <div class="hero-stay-collage">
+      <div class="collage-main" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-b906afbfc14c.jpg"><img src="images/img-b906afbfc14c.jpg" alt="Dormy Inn 金澤 入口"></div>
+      <div class="collage-tr" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-fef537fdc0c1.jpg"><img src="images/img-fef537fdc0c1.jpg" alt="Dormy Inn 金澤 天然溫泉"></div>
+      <div class="collage-br" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-4d2ff128d730.jpg"><img src="images/img-4d2ff128d730.jpg" alt="Dormy Inn 金澤 朝食"></div>
+      <span class="hero-stay-tag">DAY 4 STAY</span>
+      <span class="hero-stay-onsen">天然温泉</span>
+      <span class="hero-stay-corner">9/27 入住 · 加賀の湧泉</span>
+      <span class="hero-stay-meta"><strong>DORMY INN</strong>KANAZAWA</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">STAY · KANAZAWA</div>
+        <div class="hero-stay-name">Dormy Inn 金澤</div>
+        <div class="hero-stay-sub">金澤駅步行 12 分 · 頂樓天然溫泉「加賀の湧泉」</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <div class="spot">
+    <div class="spot-time">下午</div>
+    <div class="spot-body">
+      <div class="spot-name">🗾 金澤自由活動</div>
+      <div class="spot-desc">近江町市場 / 兼六園 / 金澤城 / 東茶屋街 / 21 世紀美術館 · 飯店步行 5 分皆可達</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">20:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🥩 一同晚餐 · 金澤燒肉</div>
+      <div class="spot-desc">全員集合一起吃燒肉(店家待定)</div>
+    </div>
+  </div>
+
+  <a class="hero-stay" href="https://maps.app.goo.gl/j95GUYJZmroRDn439" target="_blank" rel="noopener" style="margin-top:4px">
+    <div class="hero-stay-media" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-69292ecda4af.jpg">
+      <img src="images/img-69292ecda4af.jpg" alt="Dormy Inn 免費宵夜拉麵">
+      <span class="hero-stay-tag" style="background:rgba(0,0,0,0.55);color:#fff;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)">21:30 – 23:00 · 免費</span>
+      <span class="hero-stay-corner">夜鳴きそば · 醬油拉麵</span>
+      <span class="hero-stay-meta"><strong>1F CAFÉ &amp; LOUNGE</strong>OASIS 金澤店</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">DORMY INN · 招牌服務</div>
+        <div class="hero-stay-name">夜鳴きそば(免費宵夜拉麵)</div>
+        <div class="hero-stay-sub">每晚 21:30–23:00 在 1F OASIS 提供住客限定的免費醬油拉麵 · 份量小但現煮現吃</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="divider"></div>
+
+<div class="day" id="day-28">
+  <div class="day-header">
+    <div class="day-num"><div class="date">9/28</div><div class="dow">一</div></div>
+    <div class="day-info">
+      <h2>金澤</h2>
+      <div class="theme">飯店朝食 · 市區漫遊</div>
+    </div>
+    <div class="weather-badge" data-empty data-date="2026-09-28" data-lat="36.578" data-lon="136.648" data-loc="金澤"><div class="wb-row"><span class="wb-loc">金澤</span><span><span class="wb-main">—</span></span></div></div>
+  </div>
+
+  <a class="hero-stay" href="https://maps.app.goo.gl/j95GUYJZmroRDn439" target="_blank" rel="noopener">
+    <div class="hero-stay-collage">
+      <div class="collage-main" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-9667dbadd53d.jpg"><img src="images/img-9667dbadd53d.jpg" alt="Dormy Inn 金澤 海鮮丼朝食"></div>
+      <div class="collage-tr" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-b26c3ea60fce.jpg"><img src="images/img-b26c3ea60fce.jpg" alt="Dormy Inn 金澤 餐廳座席"></div>
+      <div class="collage-br" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-b8c9b47e891c.jpg"><img src="images/img-b8c9b47e891c.jpg" alt="Dormy Inn 金澤 朝食 buffet"></div>
+      <span class="hero-stay-tag">07:00 · 朝食</span>
+      <span class="hero-stay-corner">海鮮丼 · 加賀名物 · 自助 buffet</span>
+      <span class="hero-stay-meta"><strong>DORMY INN</strong>朝食バイキング</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">BREAKFAST · 金澤</div>
+        <div class="hero-stay-name">飯店朝食 · 海鮮丼自助吧</div>
+        <div class="hero-stay-sub">自選鮭魚卵 / 鮪魚 / 鮭魚切丁鋪在白飯上,搭配加賀漬物、味噌湯與洋食 buffet · 06:30 開始供應</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <div class="spot">
+    <div class="spot-time">08:10</div>
+    <div class="spot-body">
+      <div class="spot-name">🚗 Toyota Rent a Car 金沢駅西口店 · 取車</div>
+      <div class="spot-desc">家族 8 人,租兩台車。從 Dormy Inn 步行過金澤駅地下道走西口出來約 10 分;或計程車 5 分先把證件 / 信用卡 / 國際駕照備好</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://www.google.com/maps/search/?api=1&query=Toyota+Rent+a+Car+%E9%87%91%E6%B2%A2%E9%A7%85%E8%A5%BF%E5%8F%A3%E5%BA%97" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          取車地點
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <a class="hero-stay" href="https://www.google.com/maps/search/?api=1&query=Toyota+Rent+a+Car+%E9%87%91%E6%B2%A2%E9%A7%85%E8%A5%BF%E5%8F%A3%E5%BA%97" target="_blank" rel="noopener" aria-label="Toyota Rent a Car 金沢駅西口店 · 開啟地圖">
+    <div class="hero-stay-media" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-d65239458d12.jpg">
+      <img src="images/img-d65239458d12.jpg" alt="Toyota Rent a Car 金沢駅西口店外觀">
+      <span class="hero-stay-tag">Pick-up · 取車</span>
+      <span class="hero-stay-vert">レンタカー</span>
+      <span class="hero-stay-corner">TOYOTA RENT A CAR · KANAZAWA</span>
+      <span class="hero-stay-meta"><strong>9月28日 月</strong>金沢駅西口徒步 1 分</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">RENT-A-CAR · 取車</div>
+        <div class="hero-stay-name">Toyota Rent a Car 金沢駅西口店</div>
+        <div class="hero-stay-sub">家族 8 人 · 租兩台車 · 預定 08:10 取車</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <div class="spot">
+    <div class="spot-time">08:40</div>
+    <div class="spot-body">
+      <div class="spot-name">🅿️ 開回 Dormy Inn 接家人</div>
+      <div class="spot-desc">兩車開回飯店前接家人們 + 行李,出發本日行程</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://maps.app.goo.gl/j95GUYJZmroRDn439" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Dormy Inn 金澤
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">10:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🏪 全家便利商店 大澤野笹津店</div>
+      <div class="spot-desc">途經 · 上山前最後補給。零食 / 水 / 飯糰 / 暖暖包,鍋平高原氣溫比平地低 5–8°C,新穗高纜車山頂約 2,150m 更冷</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://maps.app.goo.gl/EGx2QdfFZqDG5g6u6" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          全家 大澤野笹津店
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">11:45</div>
+    <div class="spot-body">
+      <div class="spot-name">🅿️ 鍋平高原駐車場(抵達)</div>
+      <div class="spot-desc">新穗高高空纜車起點。<strong>需提前預約登山者停車</strong>,沒預約現場可能被請走。停好車後走到「しらかば平駅」搭第 2 纜車(雙層車廂、日本唯一)上「西穗高口駅」,全程約 15 分</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://maps.app.goo.gl/h3vQ4N2GwJQkJua89" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          鍋平高原駐車場
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <strong>💡 預約 & 注意</strong>
+    鍋平高原登山者駐車場用 <a href="https://shinhotaka-ropeway.jp" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">新穂高ロープウェイ官網</a> 預約。8 人 / 兩台車 → 預約兩個車位。9 月底山上約 5–10°C,記得帶薄外套
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">12:15</div>
+    <div class="spot-body">
+      <div class="spot-name">🚠 第 2 纜車 しらかば平駅 → 西穂高口駅</div>
+      <div class="spot-desc">日本唯一雙層車廂纜車,固定時刻每小時 :15 / :45 兩班 · 單程約 7 分,海拔升到 2,156m。下車後到展望台看槍ヶ岳・笠ヶ岳全景</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://maps.app.goo.gl/vJCQsdgV4W3iUCm88" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          しらかば平駅
+        </a>
+        <a class="btn btn-nav" href="https://maps.app.goo.gl/4x4srYaEzddJ5myi8" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          西穂高口駅
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">~12:30</div>
+    <div class="spot-body">
+      <div class="spot-name">🍝 CAFE GOKAN · 山頂午餐</div>
+      <div class="spot-desc">西穂高口駅 2F 餐廳。海拔 2,156m 邊看北阿爾卑斯全景邊吃飯,招牌是飛驒牛咖哩 / 高山拉麵 / 烤蘋果派</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://maps.app.goo.gl/BupS7Rn2aUZVbN6S9" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          CAFE GOKAN
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">13:20</div>
+    <div class="spot-body">
+      <div class="spot-name">🥾 登山出發 · 西穂高口駅 → 西穂山荘</div>
+      <div class="spot-desc">標高從 2,156m 微降後再緩升到 2,367m,單程約 1.5–2 小時。步道整理良好但有岩石路段,建議登山鞋 + 登山杖。長輩可放慢節奏分段休息</div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <strong>⛰️ 登山注意</strong>
+    9 月底午後常起霧或雷陣雨,目標 15:30 前抵達。出發前在西穂高口駅補水、洗手間,山屋飲水有限。手機訊號斷續,建議下載離線地圖
+  </div>
+
+  <a href="https://maps.app.goo.gl/1euqpeuiNMpUbeZA6" class="hero-stay" target="_blank" rel="noopener">
+    <div class="hero-stay-collage">
+      <div class="collage-main" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-434d1648af47.jpg"><img src="images/img-434d1648af47.jpg" alt="西穂山荘 本館外觀"></div>
+      <div class="collage-tr" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-12d6a2127933.jpg"><img src="images/img-12d6a2127933.jpg" alt="西穂山荘 入口 2367m 標牌"></div>
+      <div class="collage-br" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-e782ae943eaf.jpg"><img src="images/img-e782ae943eaf.jpg" alt="西穂山荘 仰角藍天"></div>
+      <span class="hero-stay-tag">DAY 5 STAY · 2367m</span>
+      <span class="hero-stay-vert">北アルプス</span>
+      <span class="hero-stay-corner">NISHIHO SANSO · 2,367m</span>
+      <span class="hero-stay-meta"><strong>9月28日 月</strong>北アルプス · 山小屋</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">STAY · 西穂山荘</div>
+        <div class="hero-stay-name">西穂山荘</div>
+        <div class="hero-stay-sub">北阿爾卑斯山屋 · 海拔 2,367m · 通鋪式房間 · 山小屋夕食定食 · 夜空無光害可看銀河</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+    <div class="carousel hero-stay-strip" data-carousel>
+      <div class="carousel-track">
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-362e22f622c7.jpg">
+          <img src="images/img-362e22f622c7.jpg" alt="西穂山荘 夕食 漢堡排定食" loading="lazy">
+          <span class="carousel-caption">Dinner · 山小屋夕食</span>
+        </div>
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-58e535489e3f.jpg">
+          <img src="images/img-58e535489e3f.jpg" alt="西穂山荘 食堂" loading="lazy">
+          <span class="carousel-caption">Dining · 木造食堂</span>
+        </div>
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-f50410f9c20d.jpg">
+          <img src="images/img-f50410f9c20d.jpg" alt="西穂山荘 食堂俯瞰" loading="lazy">
+          <span class="carousel-caption">Interior · 二樓俯瞰</span>
+        </div>
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/img-98e91af1c91a.jpg">
+          <img src="images/img-98e91af1c91a.jpg" alt="西穂山荘 和室客房" loading="lazy">
+          <span class="carousel-caption">Room · 榻榻米和室</span>
+        </div>
+      </div>
+      <span class="carousel-hint">← Swipe →</span>
+      <span class="carousel-counter" data-counter>1 / 4</span>
+      <div class="carousel-dots" role="tablist" data-dots>
+        <button class="carousel-dot is-active" type="button" aria-label="第 1 張" data-idx="0"></button>
+        <button class="carousel-dot" type="button" aria-label="第 2 張" data-idx="1"></button>
+        <button class="carousel-dot" type="button" aria-label="第 3 張" data-idx="2"></button>
+        <button class="carousel-dot" type="button" aria-label="第 4 張" data-idx="3"></button>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="divider"></div>
+
+<div class="day" id="day-29">
+  <div class="day-header">
+    <div class="day-num"><div class="date">9/29</div><div class="dow">二</div></div>
+    <div class="day-info">
+      <h2>西穂 → 界 阿爾卑斯</h2>
+      <div class="theme">下山 + 開車到星野溫泉</div>
+    </div>
+    <div class="weather-badge" data-empty data-date="2026-09-29" data-lat="36.1196" data-lon="137.6437" data-loc="界 阿爾卑斯"><div class="wb-row"><span class="wb-loc">界 アルプス</span><span><span class="wb-main">—</span></span></div></div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">06:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🍱 山莊朝食</div>
+      <div class="spot-desc">西穂山荘 06:00 早餐(山小屋固定時間,要準時)。整理裝備、結帳、退房</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">07:30</div>
+    <div class="spot-body">
+      <div class="spot-name">🥾 下山出發 · 西穂山荘 → 西穂高口駅</div>
+      <div class="spot-desc">海拔 2,367m → 2,156m,下坡為主,單程 1–1.5 小時。早上空氣涼,可能有露水,小心岩石濕滑</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">~09:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🚠 西穂高口駅 → 第 2 纜車下山</div>
+      <div class="spot-desc">回到 しらかば平駅 再接第 1 纜車下到新穂高温泉駅。下山纜車班次同樣固定:第 2 纜車每小時 :15 / :45</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://maps.app.goo.gl/4x4srYaEzddJ5myi8" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          西穂高口駅
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">10:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🚗 回到鍋平駐車場 · 開車出發</div>
+      <div class="spot-desc">兩車取車,往松本方向走。國道 158 號穿越安房峠隧道,沿梓川河谷上山約 1.5 小時</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://maps.app.goo.gl/h3vQ4N2GwJQkJua89" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          鍋平高原駐車場
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">途中</div>
+    <div class="spot-body">
+      <div class="spot-name">🚻 道の駅 風穴の里 · 休息站</div>
+      <div class="spot-desc">沿國道 158 號的休息站,有廁所、特產、霜淇淋。「風穴」是地下天然冷藏室、夏天也保持 5°C 左右</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://maps.app.goo.gl/878mTCxRAch1Nzni9" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          風穴の里
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">12:30</div>
+    <div class="spot-body">
+      <div class="spot-name">🥩 焼肉 SOUL · 午餐</div>
+      <div class="spot-desc">松本市區燒肉店。下山後吃肉補能量</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://maps.app.goo.gl/RFzHPC6ShPz3kieR7" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          焼肉 SOUL
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://maps.app.goo.gl/pouicmvmgLZQqBRh9" class="hero-stay" target="_blank" rel="noopener">
+    <div class="hero-stay-collage">
+      <div class="collage-main" onclick="event.preventDefault();openLightbox(this)" data-full="images/kai-1.jpg"><img src="images/kai-1.jpg" alt="界 阿爾卑斯 入口 + 北阿爾卑斯山景" loading="lazy"></div>
+      <div class="collage-tr" onclick="event.preventDefault();openLightbox(this)" data-full="images/kai-2.jpg"><img src="images/kai-2.jpg" alt="界 阿爾卑斯 和洋客房" loading="lazy"></div>
+      <div class="collage-br" onclick="event.preventDefault();openLightbox(this)" data-full="images/kai-3.jpg"><img src="images/kai-3.jpg" alt="界 阿爾卑斯 露天溫泉" loading="lazy"></div>
+      <span class="hero-stay-tag">DAY 6 STAY</span>
+      <span class="hero-stay-onsen">天然温泉</span>
+      <span class="hero-stay-vert">界・アルプス</span>
+      <span class="hero-stay-corner">HOSHINO RESORTS · 界 ALPS</span>
+      <span class="hero-stay-meta"><strong>9月29日 火</strong>長野・大町温泉郷</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">STAY · 界 アルプス</div>
+        <div class="hero-stay-name">星野集團 界 阿爾卑斯</div>
+        <div class="hero-stay-sub">大町温泉郷 · 鹽湯療癒 · 北阿爾卑斯山景 · 信州料理會席</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <a class="hero-stay" href="https://maps.app.goo.gl/pouicmvmgLZQqBRh9" target="_blank" rel="noopener" style="margin-top:4px">
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">DINNER · 18:30</div>
+        <div class="hero-stay-name">信州會席料理</div>
+        <div class="hero-stay-sub">界・阿爾卑斯特色「ご当地楽」會席 · 信州生山葵現磨 · 棉花糖壽喜燒(招牌演出)· 黒毛和牛</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+    <div class="carousel hero-stay-strip" data-carousel>
+      <div class="carousel-track">
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kai-dinner-1.jpg">
+          <img src="images/kai-dinner-1.jpg" alt="信州會席料理 全套" loading="lazy">
+          <span class="carousel-caption">Course · 信州會席全套</span>
+        </div>
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kai-dinner-2.jpg">
+          <img src="images/kai-dinner-2.jpg" alt="現磨山葵" loading="lazy">
+          <span class="carousel-caption">Wasabi · 信州生山葵現磨</span>
+        </div>
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kai-dinner-3.jpg">
+          <img src="images/kai-dinner-3.jpg" alt="棉花糖壽喜燒" loading="lazy">
+          <span class="carousel-caption">Sukiyaki · 棉花糖壽喜燒(招牌)</span>
+        </div>
+      </div>
+      <span class="carousel-hint">← Swipe →</span>
+      <span class="carousel-counter" data-counter>1 / 3</span>
+      <div class="carousel-dots" role="tablist" data-dots>
+        <button class="carousel-dot is-active" type="button" aria-label="第 1 張" data-idx="0"></button>
+        <button class="carousel-dot" type="button" aria-label="第 2 張" data-idx="1"></button>
+        <button class="carousel-dot" type="button" aria-label="第 3 張" data-idx="2"></button>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="divider"></div>
+
+<div class="day" id="day-30">
+  <div class="day-header">
+    <div class="day-num"><div class="date">9/30</div><div class="dow">三</div></div>
+    <div class="day-info">
+      <h2>界 阿爾卑斯 → 栂池</h2>
+      <div class="theme">退房 + 栂池纜車 + 自然園</div>
+    </div>
+    <div class="weather-badge" data-empty data-date="2026-09-30" data-lat="36.7547" data-lon="137.8094" data-loc="栂池"><div class="wb-row"><span class="wb-loc">栂池</span><span><span class="wb-main">—</span></span></div></div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">08:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🍱 飯店朝食</div>
+      <div class="spot-desc">界・阿爾卑斯朝食 · 信州風味早餐</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">10:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🚗 退房出發往栂池</div>
+      <div class="spot-desc">大町温泉郷 → 國道 148 號往白馬方向北上,沿仁科三湖(青木湖 / 中綱湖 / 木崎湖)景觀公路約 1 小時</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">11:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🅿️ 抵達栂池高原停車場</div>
+      <div class="spot-desc">停車場旁就是ゴンドラリフト「イヴ」乘車口,買來回券準備上山</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://maps.app.goo.gl/gU71qWnAtLWLSvsK7" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          栂池高原停車場
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <a class="hero-stay" href="https://maps.app.goo.gl/gU71qWnAtLWLSvsK7" target="_blank" rel="noopener" aria-label="栂池自然園 · 開啟地圖">
+    <div class="hero-stay-collage four">
+      <div class="collage-main" onclick="event.preventDefault();openLightbox(this)" data-full="images/tsugaike-gondola.jpg"><img src="images/tsugaike-gondola.jpg" alt="栂池ゴンドラリフト 從纜車望白馬連峰" loading="lazy"></div>
+      <div class="collage-tr" onclick="event.preventDefault();openLightbox(this)" data-full="images/tsugaike-view.jpg"><img src="images/tsugaike-view.jpg" alt="栂池自然園 展望濕原 白馬連峰" loading="lazy"></div>
+      <div class="collage-br" onclick="event.preventDefault();openLightbox(this)" data-full="images/tsugaike-autumn.jpg"><img src="images/tsugaike-autumn.jpg" alt="栂池自然園 秋・木道紅葉" loading="lazy"></div>
+      <div class="collage-b4" onclick="event.preventDefault();openLightbox(this)" data-full="images/tsugaike-visitor.jpg"><img src="images/tsugaike-visitor.jpg" alt="栂池ビジターセンター" loading="lazy"></div>
+      <span class="hero-stay-tag">~11:15 · 上山</span>
+      <span class="hero-stay-vert">栂池自然園</span>
+      <span class="hero-stay-corner">TSUGAIKE · GONDOLA &amp; SHIZENEN</span>
+      <span class="hero-stay-meta"><strong>9月30日 水</strong>白馬 · 栂池高原</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">GONDOLA · 栂池高原</div>
+        <div class="hero-stay-name">栂池ゴンドラ「イヴ」+ ロープウェイ</div>
+        <div class="hero-stay-sub">栂池高原駅 → 白樺駅(纜車 20 分)→ 自然園駅(空中ロープウェイ 5 分) · 海拔升到 1,829m · 9 月底紅葉前期</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <a class="hero-stay" href="https://www.google.com/maps/search/?api=1&query=%E6%A0%82%E6%B1%A0%E5%B1%B1%E8%8D%98" target="_blank" rel="noopener" aria-label="栂池山莊 · 開啟地圖">
+    <div class="hero-stay-media" onclick="event.preventDefault();openLightbox(this)" data-full="images/tsugaike-sanso.jpg">
+      <img src="images/tsugaike-sanso.jpg" alt="栂池山莊外觀" loading="lazy">
+      <span class="hero-stay-tag">12:00 · 午餐</span>
+      <span class="hero-stay-corner">TSUGAIKE SANSO</span>
+      <span class="hero-stay-meta"><strong>LUNCH</strong>自然園駅 · 山莊餐廳</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">LUNCH · 12:00</div>
+        <div class="hero-stay-name">栂池山莊</div>
+        <div class="hero-stay-sub">自然園駅旁山莊餐廳 · 咖哩飯 / 蕎麥麵 / 信州山菜定食</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <div class="spot">
+    <div class="spot-time">13:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🥾 自然園步道散策</div>
+      <div class="spot-desc">栂池自然園木道環線(全長約 5.5km),全程平緩,可選短中長三段路線。湿原 + 紅葉前期 + 雪山遠景</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://sizenen.otarimura.com/walking/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          散策路線圖
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">15:00</div>
+    <div class="spot-body">
+      <div class="spot-name">📍 栂池山莊集合 · 準備下山</div>
+      <div class="spot-desc">所有人在山莊前集合,走回自然園駅搭ロープウェイ → 白樺駅 → 栂池高原駅。建議抓 15:30 前的纜車</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">~16:30</div>
+    <div class="spot-body">
+      <div class="spot-name">🚗 抵達白馬飯店 · check-in</div>
+      <div class="spot-desc">從栂池高原駅開車約 30 分到白馬村中心。白馬連峰飯店:天然溫泉 + 信州食材自助餐</div>
+    </div>
+  </div>
+
+  <a href="https://maps.app.goo.gl/nnHAbhU5kkZCjsPF6" class="hero-stay" target="_blank" rel="noopener" aria-label="白馬飯店 · 開啟地圖">
+    <div class="hero-stay-collage">
+      <div class="collage-main" onclick="event.preventDefault();openLightbox(this)" data-full="images/hakuba-1.jpg"><img src="images/hakuba-1.jpg" alt="白馬飯店外觀 + 北阿爾卑斯背景" loading="lazy"></div>
+      <div class="collage-tr" onclick="event.preventDefault();openLightbox(this)" data-full="images/hakuba-2.jpg"><img src="images/hakuba-2.jpg" alt="白馬飯店 客房" loading="lazy"></div>
+      <div class="collage-br" onclick="event.preventDefault();openLightbox(this)" data-full="images/hakuba-onsen.jpg"><img src="images/hakuba-onsen.jpg" alt="白馬飯店 天然温泉" loading="lazy"></div>
+      <span class="hero-stay-tag">DAY 7 STAY</span>
+      <span class="hero-stay-onsen">天然温泉</span>
+      <span class="hero-stay-vert">白馬・八方</span>
+      <span class="hero-stay-corner">HAKUBA HOTEL · NORTHERN ALPS</span>
+      <span class="hero-stay-meta"><strong>9月30日 水</strong>白馬村 · 八方温泉</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">STAY · 白馬</div>
+        <div class="hero-stay-name">白馬飯店(Hakuba Hotel)</div>
+        <div class="hero-stay-sub">白馬村中心 · 天然温泉大浴池 · 信州手作日西中自助餐 · 北阿爾卑斯山景</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <a class="hero-stay" href="https://maps.app.goo.gl/nnHAbhU5kkZCjsPF6" target="_blank" rel="noopener" style="margin-top:4px">
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">DINNER · 18:30</div>
+        <div class="hero-stay-name">信州手作 自助餐(日・西・中)</div>
+        <div class="hero-stay-sub">當地信州食材為主 · 飯店餐廳每晚現做手工料理 · 日式定食 + 西餐 + 中華熱炒三系列輪替</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+    <div class="carousel hero-stay-strip" data-carousel>
+      <div class="carousel-track">
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/hakuba-dinner-1.jpg">
+          <img src="images/hakuba-dinner-1.jpg" alt="信州手作 中華菜系 自助餐" loading="lazy">
+          <span class="carousel-caption">Buffet · 中華熱炒系列</span>
+        </div>
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/hakuba-dinner-2.jpg">
+          <img src="images/hakuba-dinner-2.jpg" alt="信州手作 日式自助餐全景" loading="lazy">
+          <span class="carousel-caption">Buffet · 日式手作料理</span>
+        </div>
+      </div>
+      <span class="carousel-hint">← Swipe →</span>
+      <span class="carousel-counter" data-counter>1 / 2</span>
+      <div class="carousel-dots" role="tablist" data-dots>
+        <button class="carousel-dot is-active" type="button" aria-label="第 1 張" data-idx="0"></button>
+        <button class="carousel-dot" type="button" aria-label="第 2 張" data-idx="1"></button>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="divider"></div>
+
+<div class="day" id="day-oct-1">
+  <div class="day-header">
+    <div class="day-num"><div class="date">10/1</div><div class="dow">四</div></div>
+    <div class="day-info">
+      <h2>白馬八方</h2>
+      <div class="theme">八方池健行 · 高山絕景</div>
+    </div>
+    <div class="weather-badge" data-empty data-date="2026-10-01" data-lat="36.6986" data-lon="137.8344" data-loc="八方"><div class="wb-row"><span class="wb-loc">八方</span><span><span class="wb-main">—</span></span></div></div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">07:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🍱 飯店朝食</div>
+      <div class="spot-desc">白馬飯店朝食 · 信州風自助早餐</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">08:15</div>
+    <div class="spot-body">
+      <div class="spot-name">🚗 退房 · 出發往八方駅</div>
+      <div class="spot-desc">白馬飯店 → 八方駅約 5–10 分車程</div>
+    </div>
+  </div>
+
+  <a class="hero-stay" href="https://maps.app.goo.gl/ZaUGUgpyDMQCPDNN7" target="_blank" rel="noopener" aria-label="八方駅 · 開啟地圖">
+    <div class="hero-stay-media" onclick="event.preventDefault();openLightbox(this)" data-full="images/happo-station.jpg">
+      <img src="images/happo-station.jpg" alt="白馬八方尾根 八方駅入口" loading="lazy">
+      <span class="hero-stay-tag">08:30 · 抵達</span>
+      <span class="hero-stay-vert">八方尾根</span>
+      <span class="hero-stay-corner">HAKUBA HAPPO-ONE · TICKET CENTER</span>
+      <span class="hero-stay-meta"><strong>10月1日 木</strong>白馬八方駅</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">GONDOLA · 八方駅</div>
+        <div class="hero-stay-name">白馬八方尾根 八方駅</div>
+        <div class="hero-stay-sub">先到チケットセンター買來回券 · 三段纜車「アダム」+「アルペンクワッド」+「グラートクワッド」一路上到 1,830m</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <div class="spot">
+    <div class="spot-time">~09:15</div>
+    <div class="spot-body">
+      <div class="spot-name">⛰️ 抵達纜車頂(八方池山莊)· 1,830m</div>
+      <div class="spot-desc">三段纜車 + 兩段椅式纜車一路接到八方池山莊。從這裡開始登山步道往八方池</div>
+    </div>
+  </div>
+
+  <a class="hero-stay" href="https://www.google.com/maps/search/?api=1&query=%E5%85%AB%E6%96%B9%E6%B1%A0" target="_blank" rel="noopener" aria-label="八方池 · 開啟地圖">
+    <div class="hero-stay-collage">
+      <div class="collage-main" onclick="event.preventDefault();openLightbox(this)" data-full="images/happo-pond-1.jpg"><img src="images/happo-pond-1.jpg" alt="八方池 + 白馬連峰倒影" loading="lazy"></div>
+      <div class="collage-tr" onclick="event.preventDefault();openLightbox(this)" data-full="images/happo-pond-2.jpg"><img src="images/happo-pond-2.jpg" alt="八方池 紅葉前期" loading="lazy"></div>
+      <div class="collage-br" onclick="event.preventDefault();openLightbox(this)" data-full="images/happo-lift.jpg"><img src="images/happo-lift.jpg" alt="八方尾根椅式纜車 望白馬村" loading="lazy"></div>
+      <span class="hero-stay-tag">HIKE · 3–3.5h</span>
+      <span class="hero-stay-vert">八方池</span>
+      <span class="hero-stay-corner">HAPPO POND · 2,060m</span>
+      <span class="hero-stay-meta"><strong>登山步道 · 來回</strong>1,830m → 2,060m</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">HIKE · 八方池</div>
+        <div class="hero-stay-name">八方池健行</div>
+        <div class="hero-stay-sub">八方池山莊 → 第三ケルン → 八方池(2,060m) · 來回約 3–3.5 小時 · 高山池塘倒映白馬三山(白馬鑓 / 杓子 / 白馬岳)</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <div class="spot">
+    <div class="spot-time">12:00–12:30</div>
+    <div class="spot-body">
+      <div class="spot-name">🚠 回到纜車頂(八方池山莊)· 準備下山</div>
+      <div class="spot-desc">健行結束回到 1,830m 八方池山莊集合,搭三段纜車原路下山到八方駅</div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <strong>🥾 健行注意</strong>
+    雖然有纜車輔助,池子那段還是要爬升 230m。登山鞋 + 防曬 + 飲水 + 薄外套(山頂風大)。10 月初午後常起霧,目標 12:00–12:30 回到纜車頂(八方池山莊)準備下山
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">~13:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🚗 開車前往 Snow Peak LAND STATION HAKUBA</div>
+      <div class="spot-desc">從八方駅開車約 10 分,經白馬村中心到隈研吾設計的 Snow Peak 旗艦店</div>
+    </div>
+  </div>
+
+  <a href="https://maps.app.goo.gl/rB3eAj79tx9pjkQFA" class="hero-stay" target="_blank" rel="noopener" aria-label="Snow Peak LAND STATION HAKUBA · 開啟地圖">
+    <div class="hero-stay-collage">
+      <div class="collage-main" onclick="event.preventDefault();openLightbox(this)" data-full="images/snowpeak-2.jpg"><img src="images/snowpeak-2.jpg" alt="Snow Peak LAND STATION HAKUBA 隈研吾木構外觀" loading="lazy"></div>
+      <div class="collage-tr" onclick="event.preventDefault();openLightbox(this)" data-full="images/snowpeak-3.jpg"><img src="images/snowpeak-3.jpg" alt="Snow Peak LAND STATION HAKUBA 草地外觀" loading="lazy"></div>
+      <div class="collage-br" onclick="event.preventDefault();openLightbox(this)" data-full="images/snowpeak-1.jpg"><img src="images/snowpeak-1.jpg" alt="Snow Peak LAND STATION HAKUBA 室內 帆篷天花板" loading="lazy"></div>
+      <span class="hero-stay-tag">13:00 · 午餐</span>
+      <span class="hero-stay-vert">隈研吾建築</span>
+      <span class="hero-stay-corner">SNOW PEAK · LAND STATION HAKUBA</span>
+      <span class="hero-stay-meta"><strong>10月1日 木</strong>白馬 · 隈研吾設計</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">LUNCH · 13:00</div>
+        <div class="hero-stay-name">Snow Peak LAND STATION HAKUBA</div>
+        <div class="hero-stay-sub">隈研吾設計 · 木造大屋頂 + 帆篷天花板 · 旗艦店 + 餐廳 + 戶外露台 · 白馬連峰山景</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://maps.app.goo.gl/tfhrStB2m78JRH9t7" class="hero-stay" target="_blank" rel="noopener" aria-label="ao Lakeside Cafe · 青木湖 · 開啟地圖">
+    <div class="hero-stay-collage">
+      <div class="collage-main" onclick="event.preventDefault();openLightbox(this)" data-full="images/aoki-cafe.jpg"><img src="images/aoki-cafe.jpg" alt="ao Lakeside Cafe + 青木湖 + 白馬連峰" loading="lazy"></div>
+      <div class="collage-tr" onclick="event.preventDefault();openLightbox(this)" data-full="images/aoki-terrace.jpg"><img src="images/aoki-terrace.jpg" alt="ao Lakeside Cafe 湖邊露台" loading="lazy"></div>
+      <div class="collage-br" onclick="event.preventDefault();openLightbox(this)" data-full="images/aoki-lake.jpg"><img src="images/aoki-lake.jpg" alt="青木湖 + SUP" loading="lazy"></div>
+      <span class="hero-stay-tag">14:30 · 散策 ☕</span>
+      <span class="hero-stay-vert">青木湖</span>
+      <span class="hero-stay-corner">AOKI LAKE · LAKESIDE CAFE ao</span>
+      <span class="hero-stay-meta"><strong>10月1日 木</strong>仁科三湖 · 青木湖</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">CAFE · 14:30</div>
+        <div class="hero-stay-name">青木湖畔 · ao Lakeside Cafe</div>
+        <div class="hero-stay-sub">仁科三湖最北的青木湖,湖水透明度極高 · 湖邊咖啡店「ao」露台座位看山湖景色 · 喝杯咖啡放鬆</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <div class="spot">
+    <div class="spot-time">15:30</div>
+    <div class="spot-body">
+      <div class="spot-name">🚗 離開青木湖 · 開車往長野</div>
+      <div class="spot-desc">青木湖 → 長野市約 1.5 小時(80km)· 沿國道 19 號或上信越自動車道</div>
+    </div>
+  </div>
+
+  <a class="hero-stay" href="https://maps.app.goo.gl/qtoqpGvuJpRYYDku5" target="_blank" rel="noopener" aria-label="Toyota Rent a Car 長野店 · 開啟地圖">
+    <div class="hero-stay-media" onclick="event.preventDefault();openLightbox(this)" data-full="images/toyota-nagano.jpg">
+      <img src="images/toyota-nagano.jpg" alt="Toyota Rent a Car 長野店外觀" loading="lazy">
+      <span class="hero-stay-tag">~17:00 · 還車</span>
+      <span class="hero-stay-vert">レンタカー</span>
+      <span class="hero-stay-corner">TOYOTA RENT A CAR · NAGANO</span>
+      <span class="hero-stay-meta"><strong>10月1日 木</strong>長野駅徒步 5 分</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">RENT-A-CAR · 還車</div>
+        <div class="hero-stay-name">Toyota Rent a Car 長野店</div>
+        <div class="hero-stay-sub">在金澤取車的兩台 Toyota 在這還掉(異地還車)· 步行到飯店約 5–7 分鐘</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://maps.app.goo.gl/1ZZGkFpQgfgMHWzW6" class="hero-stay" target="_blank" rel="noopener" aria-label="相鐵 FRESA INN 長野站善光寺口 · 開啟地圖">
+    <div class="hero-stay-media" onclick="event.preventDefault();openLightbox(this)" data-full="images/fresa-nagano.jpg">
+      <img src="images/fresa-nagano.jpg" alt="相鐵 FRESA INN 長野站善光寺口外觀" loading="lazy">
+      <span class="hero-stay-tag">DAY 8 STAY</span>
+      <span class="hero-stay-vert">長野・善光寺口</span>
+      <span class="hero-stay-corner">SOTETSU FRESA INN · NAGANO</span>
+      <span class="hero-stay-meta"><strong>10月1日 木</strong>長野駅善光寺口</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">STAY · 長野</div>
+        <div class="hero-stay-name">相鐵 FRESA INN 長野站善光寺口</div>
+        <div class="hero-stay-sub">長野駅善光寺口出來就到 · 商務型飯店 · 隔天可早起步行去善光寺參拜</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="divider"></div>
+
+<div class="day" id="day-oct-2">
+  <div class="day-header">
+    <div class="day-num"><div class="date">10/2</div><div class="dow">五</div></div>
+    <div class="day-info">
+      <h2>長野 → 東京</h2>
+      <div class="theme">北陸新幹線 光輝 · 1h22m</div>
+    </div>
+    <div class="weather-badge" data-empty data-date="2026-10-02" data-lat="35.6812" data-lon="139.7671" data-loc="東京"><div class="wb-row"><span class="wb-loc">東京</span><span><span class="wb-main">—</span></span></div></div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">09:30</div>
+    <div class="spot-body">
+      <div class="spot-name">🏨 退房 · 出發買早餐</div>
+      <div class="spot-desc">FRESA INN 無含早餐 · 退房後步行 1 分到長野駅,在駅構內買早餐 / 駅弁帶上車吃</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">~10:00</div>
+    <div class="spot-body">
+      <div class="spot-name">🚉 長野駅 · 13 號月台候車</div>
+      <div class="spot-desc">建議在 NewDays / 駅弁売場買飯糰、三明治、信州牛弁當帶上車吃 · 提早 10 分鐘到月台</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://www.google.com/maps/search/?api=1&query=%E9%95%B7%E9%87%8E%E9%A7%85" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          長野駅
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="flight-card">
+    <div class="flight-header">
+      <div class="flight-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+      </div>
+      <div>
+        <div class="flight-title">北陸新幹線 · 光輝 506(かがやき)</div>
+        <div style="font-size:11px;color:var(--text-soft);margin-top:1px">¥8,250 起 · 1 小時 22 分 · 13 號月台 · 全車指定席</div>
+      </div>
+    </div>
+    <div class="flight-route">
+      <div class="flight-endpoint">
+        <div class="flight-airport">長野 NAGANO</div>
+        <div class="flight-time-large">10:14</div>
+      </div>
+      <div class="flight-arrow">🚄</div>
+      <div class="flight-endpoint" style="text-align:right">
+        <div class="flight-airport">東京 TOKYO</div>
+        <div class="flight-time-large">11:36</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <strong>🎫 新幹線小提醒</strong>
+    かがやき 全車指定席,事前在 e5489 / JR-EAST 網站或 SmartEX 劃位。8 人團體建議靠近一起劃位
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">~11:36 後</div>
+    <div class="spot-body">
+      <div class="spot-name">🗾 東京自由活動</div>
+      <div class="spot-desc">抵達東京駅後自由解散 · 各自逛淺草 / 銀座 / 新宿 / 澀谷 / 秋葉原 / 表參道</div>
+    </div>
+  </div>
+
+  <div class="tbd-spot">📝 當晚住宿地點待定</div>
+</div>
+
+<div class="divider"></div>
+
+<div class="day" id="day-oct-3">
+  <div class="day-header">
+    <div class="day-num"><div class="date">10/3</div><div class="dow">六</div></div>
+    <div class="day-info">
+      <h2>東京</h2>
+      <div class="theme">最後一晚 · 屋形船慶功宴</div>
+    </div>
+    <div class="weather-badge" data-empty data-date="2026-10-03" data-lat="35.6586" data-lon="139.7919" data-loc="東京"><div class="wb-row"><span class="wb-loc">東京</span><span><span class="wb-main">—</span></span></div></div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">白天</div>
+    <div class="spot-body">
+      <div class="spot-name">🗾 東京自由活動</div>
+      <div class="spot-desc">最後一個整天 · 各自逛街 / 採購伴手禮 / 晚上集合慶功宴</div>
+    </div>
+  </div>
+
+  <div class="spot">
+    <div class="spot-time">17:30</div>
+    <div class="spot-body">
+      <div class="spot-name">⚓ 屋形船晴海屋報到</div>
+      <div class="spot-desc">17:30–17:40 報到時間 · <strong>船不等人,務必提前抵達</strong> · 18:00 準時開船</div>
+      <div class="btn-row">
+        <a class="btn btn-nav" href="https://maps.app.goo.gl/XF4qRqq4QXHXUhZC6" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          晴海屋乘船處
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://maps.app.goo.gl/XF4qRqq4QXHXUhZC6" class="hero-stay" target="_blank" rel="noopener" aria-label="屋形船晴海屋 · 開啟地圖">
+    <div class="hero-stay-collage four-vertical">
+      <div class="collage-main" onclick="event.preventDefault();openLightbox(this)" data-full="images/yakatabune-4.jpg"><img src="images/yakatabune-4.jpg" alt="屋形船 + 彩虹大橋夜景" loading="lazy"></div>
+      <div class="collage-tr" onclick="event.preventDefault();openLightbox(this)" data-full="images/yakatabune-2.jpg"><img src="images/yakatabune-2.jpg" alt="屋形船晴海屋 + 晴空塔夜景" loading="lazy"></div>
+      <div class="collage-br" onclick="event.preventDefault();openLightbox(this)" data-full="images/yakatabune-1.jpg"><img src="images/yakatabune-1.jpg" alt="屋形船船內 榻榻米座席" loading="lazy"></div>
+      <div class="collage-b4" onclick="event.preventDefault();openLightbox(this)" data-full="images/yakatabune-3.jpg"><img src="images/yakatabune-3.jpg" alt="屋形船晴海屋 全 11 品和食套餐" loading="lazy"></div>
+      <span class="hero-stay-tag">18:00 · 慶功宴 🎉</span>
+      <span class="hero-stay-vert">屋形船・晴海屋</span>
+      <span class="hero-stay-corner">YAKATABUNE · FINAL NIGHT CRUISE</span>
+      <span class="hero-stay-meta"><strong>10月3日 土</strong>家族旅遊・最後一晚</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">DINNER · 18:00 開船</div>
+        <div class="hero-stay-name">屋形船晴海屋 · 慶功宴</div>
+        <div class="hero-stay-sub">全 11 品和食套餐 + 飲み放題 · 榻榻米座席 · 沿隅田川夜景巡航 · 晴空塔 × 彩虹大橋雙打卡</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <div class="tip">
+    <strong>⚓ 屋形船重要提醒</strong>
+    報到時間 17:30–17:40,18:00 準時開船,<strong>船不等人</strong>!家族 8 人請至少提早 30 分鐘到乘船處集合
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="day" id="day-oct-4">
+  <div class="day-header">
+    <div class="day-num"><div class="date">10/4</div><div class="dow">日</div></div>
+    <div class="day-info">
+      <h2>回到台北</h2>
+      <div class="theme">賦歸</div>
+    </div>
+    <div class="weather-badge" data-empty data-date="2026-10-04" data-lat="" data-lon="" data-loc="TBD"><div class="wb-row"><span class="wb-loc">TBD</span><span><span class="wb-main">—</span></span></div></div>
+  </div>
+  <div class="tbd-spot">
+    📝 行程待安排<br>
+    <span style="font-size:11px">回程航班 / 機場接駁</span>
+  </div>
+</div>
+
+<div class="footer">
+  日本 11 日遊 <span class="heart">♥</span><br>
+  9/24 – 10/4 · 點按鈕直接開啟 Google Maps<br>
+  <span style="opacity:0.6;font-size:11px">最後更新 2026-06-08</span>
+</div>
+
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="放大圖片">
+  <button class="lightbox-close" id="lightboxClose" type="button" aria-label="關閉">×</button>
+  <img alt="放大檢視">
+</div>
+<script>
+(function(){
+  function closeLightbox(){
+    var lb=document.getElementById("lightbox");
+    if(!lb)return;
+    lb.classList.remove("is-open");
+    var i=lb.querySelector("img");
+    if(i)i.removeAttribute("src");
+    document.body.style.overflow="";
+  }
+  window.openLightbox=function(srcEl){
+    var lb=document.getElementById("lightbox");
+    var img=lb.querySelector("img");
+    var src=srcEl.getAttribute("data-full")||srcEl.querySelector("img").src;
+    img.src=src;
+    lb.classList.add("is-open");
+    document.body.style.overflow="hidden";
+  };
+  function bind(){
+    var lb=document.getElementById("lightbox");
+    var btn=document.getElementById("lightboxClose");
+    if(lb)lb.addEventListener("click",function(e){if(e.target===lb)closeLightbox();},false);
+    if(btn)btn.addEventListener("click",function(e){e.stopPropagation();closeLightbox();},false);
+    document.addEventListener("keydown",function(e){if(e.key==="Escape")closeLightbox();});
+    document.querySelectorAll("[data-carousel]").forEach(function(car){
+      var track=car.querySelector(".carousel-track");
+      var dots=car.querySelectorAll(".carousel-dot");
+      var counter=car.querySelector("[data-counter]");
+      if(!track||!dots.length)return;
+      function update(){
+        var idx=Math.round(track.scrollLeft/track.clientWidth);
+        if(idx<0)idx=0;if(idx>=dots.length)idx=dots.length-1;
+        dots.forEach(function(d,i){d.classList.toggle("is-active",i===idx);});
+        if(counter)counter.textContent=(idx+1)+" / "+dots.length;
+      }
+      track.addEventListener("scroll",function(){requestAnimationFrame(update);},{passive:true});
+      dots.forEach(function(d){
+        d.addEventListener("click",function(){
+          var i=parseInt(d.getAttribute("data-idx"),10)||0;
+          track.scrollTo({left:i*track.clientWidth,behavior:"smooth"});
+        });
+      });
+    });
+  }
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",bind);}else{bind();}
+})();
+</script>
+
+<a class="theme-toggle" id="themeToggle" href="javascript:void(0)" role="button" aria-label="切換深色模式" onclick="var c=document.documentElement;var n=c.getAttribute('data-theme')==='dark'?'light':'dark';c.setAttribute('data-theme',n);try{localStorage.setItem('trip-2026-09-theme',n);}catch(e){}return false;">
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+</a>
+
+<a href="#" class="back-to-top" aria-label="回到頂部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</a>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+.DS_Store
+.Spotlight-V100
+.Trashes
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Cron log on cloud machine (build@10.129.3.48:/build/claude/japan-trip-2026/cron.log)
+cron.log
+
+# Source images — only images/ (the deployed, optimised copies) gets committed
+photos/
