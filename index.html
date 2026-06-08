@@ -113,11 +113,14 @@ html{scroll-behavior:smooth;overflow-x:clip;overscroll-behavior-x:none}
 .day{scroll-margin-top:12px}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:0;min-height:100vh;overflow-x:clip;overscroll-behavior-x:none;width:100%}
 .container{max-width:560px;margin:0 auto;background:var(--surface);min-height:100vh;box-shadow:0 0 20px var(--container-shadow)}
-.hero{padding:14px 20px 12px;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-2) 100%);color:#fff}
+.hero{padding:14px 20px 12px;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-2) 100%);color:#fff;position:relative}
 .hero h1{font-size:22px;font-weight:600;letter-spacing:-0.5px;line-height:1.3}
 .hero .sub{font-size:13px;opacity:0.9;margin-top:4px}
 .hero .meta{display:flex;gap:16px;margin-top:10px;font-size:12px;opacity:0.95;flex-wrap:wrap}
 .hero .meta-item{display:flex;align-items:center;gap:5px}
+.hero-summary-link{position:absolute;top:14px;right:16px;display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#fff;background:rgba(255,255,255,0.18);padding:5px 10px;border-radius:12px;text-decoration:none;letter-spacing:0.5px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background 0.2s;font-weight:500}
+.hero-summary-link:hover{background:rgba(255,255,255,0.28)}
+.hero-summary-link svg{width:12px;height:12px}
 .day{padding:20px 16px 8px}
 .day-header{display:flex;align-items:center;gap:10px;position:sticky;top:-1px;z-index:50;background:var(--surface);padding:10px 16px;margin:0 -16px 14px;border-bottom:1px solid var(--border);backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);transition:padding 0.2s ease,background-color 0.4s ease,border-color 0.4s ease}
 .day-header.is-stuck{padding:4px 16px}
@@ -372,6 +375,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 <div class="container">
 
 <div class="hero">
+  <a href="summary.html" class="hero-summary-link" aria-label="開啟簡易行程表">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
+    簡易行程表
+  </a>
   <h1>日本 11 日遊</h1>
   <div class="sub">9/24 – 10/4 · 京都・金澤・北阿爾卑斯・白馬・東京</div>
   <div class="meta">
