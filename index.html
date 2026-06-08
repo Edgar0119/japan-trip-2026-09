@@ -776,58 +776,74 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     </div>
   </a>
 
-  <div class="spot">
-    <div class="spot-time">下午</div>
-    <div class="spot-body">
-      <div class="spot-name">🗾 金澤自由活動</div>
-      <div class="spot-desc">近江町市場 / 兼六園 / 金澤城 / 東茶屋街 / 21 世紀美術館</div>
-      <div class="btn-row">
-        <a class="btn btn-nav" href="https://maps.app.goo.gl/zM71nBdF228eBcXw9" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          近江町市場
-        </a>
-        <a class="btn btn-nav" href="https://maps.app.goo.gl/otGvg7EenYZ9LxRQA" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          兼六園
-        </a>
-        <a class="btn btn-nav" href="https://maps.app.goo.gl/Kg6oFA2P24bTtCHP8" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          東茶屋街
-        </a>
-        <a class="btn btn-nav" href="https://maps.app.goo.gl/cHB5y182UsvAUrrh6" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          21 世紀美術館
-        </a>
+  <a class="hero-stay" href="https://maps.app.goo.gl/zM71nBdF228eBcXw9" target="_blank" rel="noopener" aria-label="金澤自由活動 · 開啟地圖">
+    <div class="hero-stay-collage four">
+      <div class="collage-main" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-kenrokuen.jpg"><img src="images/kanazawa-kenrokuen.jpg" alt="兼六園 徽軫燈籠 + 霞ヶ池" loading="lazy"></div>
+      <div class="collage-tr" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-omicho.jpg"><img src="images/kanazawa-omicho.jpg" alt="近江町市場 海鮮丼一條街" loading="lazy"></div>
+      <div class="collage-br" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-higashi-chaya.jpg"><img src="images/kanazawa-higashi-chaya.jpg" alt="東茶屋街 黃昏町家街燈" loading="lazy"></div>
+      <div class="collage-b4" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-21st-museum.jpg"><img src="images/kanazawa-21st-museum.jpg" alt="21 世紀美術館 彩色玻璃裝置" loading="lazy"></div>
+      <span class="hero-stay-tag">下午 · 自由活動</span>
+      <span class="hero-stay-vert">金澤散策</span>
+      <span class="hero-stay-corner">KENROKUEN · OMICHO · CHAYAGAI · 21M</span>
+      <span class="hero-stay-meta"><strong>9月27日 日</strong>金澤 · 古都散策</span>
+    </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">SIGHTS · 金澤</div>
+        <div class="hero-stay-name">金澤景點巡禮</div>
+        <div class="hero-stay-sub">近江町市場 / 兼六園 / 金澤城 / 東茶屋街 / 21 世紀美術館</div>
       </div>
-      <div class="carousel" data-carousel style="margin-top:12px">
-        <div class="carousel-track">
-          <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-omicho.jpg">
-            <img src="images/kanazawa-omicho.jpg" alt="近江町市場 海鮮丼一條街" loading="lazy">
-            <span class="carousel-caption">Market · 近江町市場</span>
-          </div>
-          <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-kenrokuen.jpg">
-            <img src="images/kanazawa-kenrokuen.jpg" alt="兼六園 徽軫燈籠 + 霞ヶ池" loading="lazy">
-            <span class="carousel-caption">Garden · 兼六園</span>
-          </div>
-          <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-21st-museum.jpg">
-            <img src="images/kanazawa-21st-museum.jpg" alt="21 世紀美術館 彩色玻璃裝置" loading="lazy">
-            <span class="carousel-caption">Art · 21 世紀美術館</span>
-          </div>
-          <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-higashi-chaya.jpg">
-            <img src="images/kanazawa-higashi-chaya.jpg" alt="東茶屋街 黃昏町家街燈" loading="lazy">
-            <span class="carousel-caption">Street · 東茶屋街</span>
-          </div>
-        </div>
-        <span class="carousel-hint">← Swipe →</span>
-        <span class="carousel-counter" data-counter>1 / 4</span>
-        <div class="carousel-dots" role="tablist" data-dots>
-          <button class="carousel-dot is-active" type="button" aria-label="第 1 張" data-idx="0"></button>
-          <button class="carousel-dot" type="button" aria-label="第 2 張" data-idx="1"></button>
-          <button class="carousel-dot" type="button" aria-label="第 3 張" data-idx="2"></button>
-          <button class="carousel-dot" type="button" aria-label="第 4 張" data-idx="3"></button>
-        </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </div>
     </div>
+    <div class="carousel hero-stay-strip" data-carousel>
+      <div class="carousel-track">
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-omicho.jpg">
+          <img src="images/kanazawa-omicho.jpg" alt="近江町市場 海鮮丼一條街" loading="lazy">
+          <span class="carousel-caption">Market · 近江町市場</span>
+        </div>
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-kenrokuen.jpg">
+          <img src="images/kanazawa-kenrokuen.jpg" alt="兼六園 徽軫燈籠 + 霞ヶ池" loading="lazy">
+          <span class="carousel-caption">Garden · 兼六園</span>
+        </div>
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-21st-museum.jpg">
+          <img src="images/kanazawa-21st-museum.jpg" alt="21 世紀美術館 彩色玻璃裝置" loading="lazy">
+          <span class="carousel-caption">Art · 21 世紀美術館</span>
+        </div>
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-higashi-chaya.jpg">
+          <img src="images/kanazawa-higashi-chaya.jpg" alt="東茶屋街 黃昏町家街燈" loading="lazy">
+          <span class="carousel-caption">Street · 東茶屋街</span>
+        </div>
+      </div>
+      <span class="carousel-hint">← Swipe →</span>
+      <span class="carousel-counter" data-counter>1 / 4</span>
+      <div class="carousel-dots" role="tablist" data-dots>
+        <button class="carousel-dot is-active" type="button" aria-label="第 1 張" data-idx="0"></button>
+        <button class="carousel-dot" type="button" aria-label="第 2 張" data-idx="1"></button>
+        <button class="carousel-dot" type="button" aria-label="第 3 張" data-idx="2"></button>
+        <button class="carousel-dot" type="button" aria-label="第 4 張" data-idx="3"></button>
+      </div>
+    </div>
+  </a>
+
+  <div class="btn-row" style="margin-top:8px">
+    <a class="btn btn-nav" href="https://maps.app.goo.gl/zM71nBdF228eBcXw9" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      近江町市場
+    </a>
+    <a class="btn btn-nav" href="https://maps.app.goo.gl/otGvg7EenYZ9LxRQA" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      兼六園
+    </a>
+    <a class="btn btn-nav" href="https://maps.app.goo.gl/Kg6oFA2P24bTtCHP8" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      東茶屋街
+    </a>
+    <a class="btn btn-nav" href="https://maps.app.goo.gl/cHB5y182UsvAUrrh6" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      21 世紀美術館
+    </a>
   </div>
 
   <div class="spot">
