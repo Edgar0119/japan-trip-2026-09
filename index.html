@@ -307,11 +307,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .hero-stay-collage .hero-stay-tag,.hero-stay-collage .hero-stay-vert,.hero-stay-collage .hero-stay-corner,.hero-stay-collage .hero-stay-meta,.hero-stay-collage .hero-stay-onsen{z-index:2}
 .hero-stay-strip{margin:0;border-top:1px solid var(--hero-body-border);background:#0b1220;border-radius:0}
 .hero-stay-strip .carousel-item{aspect-ratio:16/10}
-.hero-stay-media-carousel{padding:0}
+.hero-stay-media-carousel{padding:0;overflow:hidden}
 .hero-stay-media-carousel::after{display:none}
-.hero-stay-media-carousel .carousel{margin:0;height:100%}
+.hero-stay-media-carousel .carousel{margin:0;height:100%;overflow:hidden}
 .hero-stay-media-carousel .carousel-track{height:100%}
-.hero-stay-media-carousel .carousel-item{aspect-ratio:auto;height:100%}
+.hero-stay-media-carousel .carousel-item{aspect-ratio:auto;height:100%;overflow:hidden}
+.hero-stay-media-carousel .carousel-item img{transition:none}
+.hero-stay:hover .hero-stay-media-carousel .carousel-item img{transform:none;filter:saturate(1.05)}
 .hero-stay-media-carousel .hero-stay-tag,
 .hero-stay-media-carousel .hero-stay-vert,
 .hero-stay-media-carousel .hero-stay-corner,
