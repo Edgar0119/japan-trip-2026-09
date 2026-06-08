@@ -310,6 +310,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .spot-collage .collage-main img{object-position:center 55%}
 .spot-collage-cap{position:absolute;left:8px;bottom:6px;color:#fff;font-size:10px;letter-spacing:0.5px;line-height:1.3;text-shadow:0 1px 3px rgba(0,0,0,0.5);z-index:2;font-weight:500;pointer-events:none}
 .spot-collage .collage-tr .spot-collage-cap,.spot-collage .collage-br .spot-collage-cap{font-size:9px}
+.container{zoom:var(--text-scale,1)}
+.text-toggle{position:fixed;bottom:124px;right:20px;width:44px;height:44px;border-radius:50%;background:var(--surface);color:var(--text);display:flex;align-items:center;justify-content:center;border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,0.15);z-index:100;cursor:pointer;padding:0;transition:opacity 0.15s,background-color 0.4s ease,border-color 0.4s ease,transform 0.15s ease;opacity:0.55;-webkit-tap-highlight-color:transparent;-webkit-appearance:none;appearance:none;font:inherit;text-decoration:none;font-weight:700;font-size:15px;line-height:1}
+@media (min-width:600px){.text-toggle{right:calc(50% - 280px + 20px)}}
+.text-toggle:hover{opacity:1}
+.text-toggle:active{transform:scale(0.92);opacity:1}
+.text-toggle .ts-label{font-variant-numeric:tabular-nums;letter-spacing:-0.5px}
 .theme-toggle{position:fixed;bottom:20px;right:20px;width:44px;height:44px;border-radius:50%;background:var(--surface);color:var(--text);display:flex;align-items:center;justify-content:center;border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,0.15);z-index:100;cursor:pointer;padding:0;transition:opacity 0.15s,background-color 0.4s ease,border-color 0.4s ease,transform 0.15s ease;opacity:0.55;-webkit-tap-highlight-color:transparent;-webkit-appearance:none;appearance:none;font:inherit;text-decoration:none}
 @media (min-width:600px){.theme-toggle{right:calc(50% - 280px + 20px)}}
 .theme-toggle:hover{opacity:1}
@@ -336,6 +342,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
     var theme = saved || (prefersDark ? "dark" : "light");
     document.documentElement.setAttribute("data-theme", theme);
+    var savedScale = localStorage.getItem("trip-2026-09-text-scale");
+    if (savedScale) document.documentElement.style.setProperty("--text-scale", savedScale);
   }catch(e){}
 })();
 </script>
@@ -1782,6 +1790,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
   if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",bind);}else{bind();}
 })();
 </script>
+
+<a class="text-toggle" id="textToggle" href="javascript:void(0)" role="button" aria-label="字體大小" onclick="var scales=['1','1.15','1.3'];var labels=['A','A+','A++'];var cur=localStorage.getItem('trip-2026-09-text-scale')||'1';var i=scales.indexOf(cur);i=(i+1)%scales.length;var n=scales[i];document.documentElement.style.setProperty('--text-scale',n);this.querySelector('.ts-label').textContent=labels[i];try{localStorage.setItem('trip-2026-09-text-scale',n);}catch(e){}return false;"><span class="ts-label">A</span></a>
+<script>(function(){var s=localStorage.getItem('trip-2026-09-text-scale')||'1';var labels={'1':'A','1.15':'A+','1.3':'A++'};var el=document.querySelector('#textToggle .ts-label');if(el)el.textContent=labels[s]||'A';})();</script>
 
 <a class="theme-toggle" id="themeToggle" href="javascript:void(0)" role="button" aria-label="切換深色模式" onclick="var c=document.documentElement;var n=c.getAttribute('data-theme')==='dark'?'light':'dark';c.setAttribute('data-theme',n);try{localStorage.setItem('trip-2026-09-theme',n);}catch(e){}return false;">
   <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
