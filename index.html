@@ -349,8 +349,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
     var theme = saved || (prefersDark ? "dark" : "light");
     document.documentElement.setAttribute("data-theme", theme);
-    var savedScale = localStorage.getItem("trip-2026-09-text-scale");
-    if (savedScale) document.documentElement.style.setProperty("--text-scale", savedScale);
+    var savedScale = localStorage.getItem("trip-2026-09-text-scale") || "1.15";
+    document.documentElement.style.setProperty("--text-scale", savedScale);
   }catch(e){}
 })();
 </script>
@@ -1812,8 +1812,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 })();
 </script>
 
-<a class="text-toggle" id="textToggle" href="javascript:void(0)" role="button" aria-label="字體大小" onclick="var scales=['1','1.15','1.3'];var labels=['A','A+','A++'];var cur=localStorage.getItem('trip-2026-09-text-scale')||'1';var i=scales.indexOf(cur);i=(i+1)%scales.length;var n=scales[i];document.documentElement.style.setProperty('--text-scale',n);this.querySelector('.ts-label').textContent=labels[i];try{localStorage.setItem('trip-2026-09-text-scale',n);}catch(e){}return false;"><span class="ts-label">A</span></a>
-<script>(function(){var s=localStorage.getItem('trip-2026-09-text-scale')||'1';var labels={'1':'A','1.15':'A+','1.3':'A++'};var el=document.querySelector('#textToggle .ts-label');if(el)el.textContent=labels[s]||'A';})();</script>
+<a class="text-toggle" id="textToggle" href="javascript:void(0)" role="button" aria-label="字體大小" onclick="var scales=['1','1.15','1.3'];var labels=['A','A+','A++'];var cur=localStorage.getItem('trip-2026-09-text-scale')||'1.15';var i=scales.indexOf(cur);i=(i+1)%scales.length;var n=scales[i];document.documentElement.style.setProperty('--text-scale',n);this.querySelector('.ts-label').textContent=labels[i];try{localStorage.setItem('trip-2026-09-text-scale',n);}catch(e){}return false;"><span class="ts-label">A+</span></a>
+<script>(function(){var s=localStorage.getItem('trip-2026-09-text-scale')||'1.15';var labels={'1':'A','1.15':'A+','1.3':'A++'};var el=document.querySelector('#textToggle .ts-label');if(el)el.textContent=labels[s]||'A+';})();</script>
 
 <a class="theme-toggle" id="themeToggle" href="javascript:void(0)" role="button" aria-label="切換深色模式" onclick="var c=document.documentElement;var n=c.getAttribute('data-theme')==='dark'?'light':'dark';c.setAttribute('data-theme',n);try{localStorage.setItem('trip-2026-09-theme',n);}catch(e){}return false;">
   <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
