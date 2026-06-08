@@ -307,6 +307,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .hero-stay-collage .hero-stay-tag,.hero-stay-collage .hero-stay-vert,.hero-stay-collage .hero-stay-corner,.hero-stay-collage .hero-stay-meta,.hero-stay-collage .hero-stay-onsen{z-index:2}
 .hero-stay-strip{margin:0;border-top:1px solid var(--hero-body-border);background:#0b1220;border-radius:0}
 .hero-stay-strip .carousel-item{aspect-ratio:16/10}
+.hero-stay-media-carousel{padding:0}
+.hero-stay-media-carousel::after{display:none}
+.hero-stay-media-carousel .carousel{margin:0;height:100%}
+.hero-stay-media-carousel .carousel-track{height:100%}
+.hero-stay-media-carousel .carousel-item{aspect-ratio:auto;height:100%}
+.hero-stay-media-carousel .hero-stay-tag,
+.hero-stay-media-carousel .hero-stay-vert,
+.hero-stay-media-carousel .hero-stay-corner,
+.hero-stay-media-carousel .hero-stay-meta,
+.hero-stay-media-carousel .hero-stay-onsen{z-index:4;pointer-events:none}
+.hero-stay-media-carousel .carousel-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,32,0.55) 0%,rgba(11,18,32,0) 28%,rgba(11,18,32,0) 60%,rgba(11,18,32,0.45) 100%);pointer-events:none;z-index:1}
 .spot-collage{position:relative;aspect-ratio:16/10;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:2px;background:#0b1220;border-radius:10px;overflow:hidden;margin:6px 0 10px}
 .spot-collage > div{position:relative;overflow:hidden;cursor:zoom-in;background:#0b1220}
 .spot-collage img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s cubic-bezier(0.2,0.6,0.2,1),filter 0.5s ease;filter:saturate(1.05)}
@@ -776,49 +787,23 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     </div>
   </a>
 
-  <div class="spot">
-    <div class="spot-time">下午</div>
-    <div class="spot-body">
-      <div class="spot-name">🗾 金澤自由活動</div>
-      <div class="spot-desc">近江町市場 / 兼六園 / 金澤城 / 東茶屋街 / 21 世紀美術館</div>
-      <div class="btn-row">
-        <a class="btn btn-nav" href="https://maps.app.goo.gl/zM71nBdF228eBcXw9" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          近江町市場
-        </a>
-        <a class="btn btn-nav" href="https://maps.app.goo.gl/otGvg7EenYZ9LxRQA" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          兼六園
-        </a>
-        <a class="btn btn-nav" href="https://maps.app.goo.gl/Kg6oFA2P24bTtCHP8" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          東茶屋街
-        </a>
-        <a class="btn btn-nav" href="https://maps.app.goo.gl/cHB5y182UsvAUrrh6" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          21 世紀美術館
-        </a>
-      </div>
-      <div class="carousel" data-carousel style="margin-top:14px">
+  <a class="hero-stay" href="https://maps.app.goo.gl/zM71nBdF228eBcXw9" target="_blank" rel="noopener" aria-label="金澤自由活動 · 開啟地圖">
+    <div class="hero-stay-media hero-stay-media-carousel">
+      <div class="carousel" data-carousel>
         <div class="carousel-track">
           <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-omicho.jpg">
             <img src="images/kanazawa-omicho.jpg" alt="近江町市場 海鮮丼一條街" loading="lazy">
-            <span class="carousel-caption">Market · 近江町市場</span>
           </div>
           <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-kenrokuen.jpg">
             <img src="images/kanazawa-kenrokuen.jpg" alt="兼六園 徽軫燈籠 + 霞ヶ池" loading="lazy">
-            <span class="carousel-caption">Garden · 兼六園</span>
           </div>
           <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-21st-museum.jpg">
             <img src="images/kanazawa-21st-museum.jpg" alt="21 世紀美術館 彩色玻璃裝置" loading="lazy">
-            <span class="carousel-caption">Art · 21 世紀美術館</span>
           </div>
           <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/kanazawa-higashi-chaya.jpg">
             <img src="images/kanazawa-higashi-chaya.jpg" alt="東茶屋街 黃昏町家街燈" loading="lazy">
-            <span class="carousel-caption">Street · 東茶屋街</span>
           </div>
         </div>
-        <span class="carousel-hint">← Swipe →</span>
         <span class="carousel-counter" data-counter>1 / 4</span>
         <div class="carousel-dots" role="tablist" data-dots>
           <button class="carousel-dot is-active" type="button" aria-label="第 1 張" data-idx="0"></button>
@@ -827,7 +812,40 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
           <button class="carousel-dot" type="button" aria-label="第 4 張" data-idx="3"></button>
         </div>
       </div>
+      <span class="hero-stay-tag">下午 · 自由活動</span>
+      <span class="hero-stay-vert">金澤散策</span>
+      <span class="hero-stay-corner">KENROKUEN · OMICHO · CHAYAGAI</span>
+      <span class="hero-stay-meta"><strong>9月27日 日</strong>金澤 · 古都散策</span>
     </div>
+    <div class="hero-stay-body">
+      <div class="hero-stay-info">
+        <div class="hero-stay-kicker">SIGHTS · 金澤</div>
+        <div class="hero-stay-name">金澤景點巡禮</div>
+        <div class="hero-stay-sub">近江町市場 / 兼六園 / 金澤城 / 東茶屋街 / 21 世紀美術館</div>
+      </div>
+      <div class="hero-stay-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <div class="btn-row" style="margin-top:10px">
+    <a class="btn btn-nav" href="https://maps.app.goo.gl/zM71nBdF228eBcXw9" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      近江町市場
+    </a>
+    <a class="btn btn-nav" href="https://maps.app.goo.gl/otGvg7EenYZ9LxRQA" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      兼六園
+    </a>
+    <a class="btn btn-nav" href="https://maps.app.goo.gl/Kg6oFA2P24bTtCHP8" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      東茶屋街
+    </a>
+    <a class="btn btn-nav" href="https://maps.app.goo.gl/cHB5y182UsvAUrrh6" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      21 世紀美術館
+    </a>
   </div>
 
   <div class="spot">
