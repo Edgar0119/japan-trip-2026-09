@@ -41,48 +41,52 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html{color-scheme:var(--color-scheme)}
-body{font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC","Hiragino Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;font-size:14px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC","Hiragino Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;font-size:16px}
 .container{max-width:560px;margin:0 auto;background:var(--surface);min-height:100vh;box-shadow:0 0 20px var(--container-shadow);zoom:var(--text-scale,1)}
 
-.hero{padding:16px 18px 14px;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-2) 100%);color:#fff;position:relative}
-.hero h1{font-size:20px;font-weight:600;letter-spacing:-0.5px;line-height:1.3;display:flex;align-items:center;gap:6px}
-.hero .sub{font-size:12px;opacity:0.92;margin-top:5px;letter-spacing:0.2px;line-height:1.5}
-.hero-back{position:absolute;top:14px;right:14px;font-size:11px;color:#fff;background:rgba(255,255,255,0.18);padding:5px 10px;border-radius:12px;text-decoration:none;letter-spacing:0.5px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background 0.2s;font-weight:500;display:inline-flex;align-items:center;gap:4px}
+.hero{padding:18px 20px 16px;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-2) 100%);color:#fff;position:relative}
+.hero h1{font-size:23px;font-weight:600;letter-spacing:-0.5px;line-height:1.3;display:flex;align-items:center;gap:6px}
+.hero .sub{font-size:13.5px;opacity:0.92;margin-top:6px;letter-spacing:0.2px;line-height:1.5}
+.hero-back{position:absolute;top:16px;right:14px;font-size:12px;color:#fff;background:rgba(255,255,255,0.18);padding:6px 11px;border-radius:12px;text-decoration:none;letter-spacing:0.5px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background 0.2s;font-weight:500;display:inline-flex;align-items:center;gap:4px}
 .hero-back:hover{background:rgba(255,255,255,0.28)}
 
-.section{padding:16px 16px}
-.section-title{font-size:10.5px;font-weight:700;letter-spacing:2px;color:var(--text-soft);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.section{padding:18px 16px}
+.section-title{font-size:11.5px;font-weight:700;letter-spacing:2px;color:var(--text-soft);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .section-title::before{content:"";width:14px;height:1px;background:var(--text-soft)}
 
+/* Highlight: 自由活動 / 重要關鍵字 */
+.hl{background:linear-gradient(180deg,transparent 55%,rgba(244,196,48,0.45) 55%);font-weight:700;color:var(--text);padding:0 2px;border-radius:2px}
+[data-theme="dark"] .hl{background:linear-gradient(180deg,transparent 55%,rgba(212,183,96,0.32) 55%);color:#fff}
+
 /* Mobile-first: stack card style instead of table on phone */
-.day-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:11px 13px;margin-bottom:8px;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:start}
+.day-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;margin-bottom:9px;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;align-items:start}
 .day-card:nth-child(even){background:var(--row-alt)}
-.day-card .dc-day{font-weight:700;color:var(--primary);font-size:12px;letter-spacing:0.5px;grid-column:1;grid-row:1;white-space:nowrap}
-.day-card .dc-date{color:var(--text-soft);font-size:11.5px;grid-column:2;grid-row:1;display:flex;align-items:center;gap:4px}
-.day-card .dc-date .dow{color:var(--text-mute);font-size:11px}
-.day-card .dc-title{font-weight:600;color:var(--text);font-size:13.5px;grid-column:1 / span 2;grid-row:2;margin-top:3px;line-height:1.4}
-.day-card .dc-detail{color:var(--text-soft);font-size:12.5px;line-height:1.55;grid-column:1 / span 2;grid-row:3;margin-top:3px}
+.day-card .dc-day{font-weight:700;color:var(--primary);font-size:14px;letter-spacing:0.5px;grid-column:1;grid-row:1;white-space:nowrap}
+.day-card .dc-date{color:var(--text-soft);font-size:13px;grid-column:2;grid-row:1;display:flex;align-items:center;gap:4px}
+.day-card .dc-date .dow{color:var(--text-mute);font-size:12.5px}
+.day-card .dc-title{font-weight:600;color:var(--text);font-size:15.5px;grid-column:1 / span 2;grid-row:2;margin-top:4px;line-height:1.4}
+.day-card .dc-detail{color:var(--text-soft);font-size:14px;line-height:1.6;grid-column:1 / span 2;grid-row:3;margin-top:4px}
 .day-card .dc-detail strong{color:var(--text);font-weight:600}
-.day-card .dc-stay{color:var(--stay-fg);font-weight:500;font-size:12px;grid-column:1 / span 2;grid-row:4;margin-top:5px;padding-top:6px;border-top:1px dashed var(--border-soft);display:flex;align-items:center;gap:5px}
-.day-card .dc-stay::before{content:"🏨";font-size:11px}
+.day-card .dc-stay{color:var(--stay-fg);font-weight:500;font-size:13.5px;grid-column:1 / span 2;grid-row:4;margin-top:6px;padding-top:7px;border-top:1px dashed var(--border-soft);display:flex;align-items:center;gap:6px}
+.day-card .dc-stay::before{content:"🏨";font-size:12px}
 .day-card .dc-stay.tbd{color:var(--tbd-fg);font-style:italic}
 .day-card .dc-stay strong{font-weight:600;color:var(--stay-fg)}
-.day-card .dc-stay .alt{color:var(--text-mute);font-size:11px;font-weight:400;font-style:normal;margin-left:4px}
+.day-card .dc-stay .alt{color:var(--text-mute);font-size:12px;font-weight:400;font-style:normal;margin-left:4px}
 
 ul.simple{list-style:none;padding:0;margin:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden}
-ul.simple li{padding:9px 13px;border-bottom:1px solid var(--border-soft);color:var(--text-soft);font-size:13px;display:flex;align-items:flex-start;gap:10px;line-height:1.5}
+ul.simple li{padding:11px 14px;border-bottom:1px solid var(--border-soft);color:var(--text-soft);font-size:14px;display:flex;align-items:flex-start;gap:10px;line-height:1.55}
 ul.simple li:last-child{border-bottom:none}
 ul.simple li:nth-child(even){background:var(--row-alt)}
-ul.simple li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--primary);margin-top:8px;flex-shrink:0;opacity:0.7}
-ul.simple li strong{color:var(--text);font-weight:600;margin-right:6px;flex-shrink:0;min-width:64px}
+ul.simple li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--primary);margin-top:9px;flex-shrink:0;opacity:0.7}
+ul.simple li strong{color:var(--text);font-weight:600;margin-right:6px;flex-shrink:0;min-width:72px}
 
 .todo-list{list-style:none;padding:0;margin:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden}
-.todo-list li{padding:10px 13px;border-bottom:1px solid var(--border-soft);font-size:13px;color:var(--text-soft);display:flex;align-items:center;gap:10px;line-height:1.4}
-.todo-list li::before{content:"☐";color:var(--stay-fg);font-size:15px;flex-shrink:0;line-height:1}
+.todo-list li{padding:12px 14px;border-bottom:1px solid var(--border-soft);font-size:14px;color:var(--text-soft);display:flex;align-items:center;gap:10px;line-height:1.45}
+.todo-list li::before{content:"☐";color:var(--stay-fg);font-size:17px;flex-shrink:0;line-height:1}
 .todo-list li:last-child{border-bottom:none}
 .todo-list li:nth-child(even){background:var(--row-alt)}
 
-.footer{padding:18px 16px 28px;text-align:center;font-size:11px;color:var(--text-mute);letter-spacing:0.3px;line-height:1.6}
+.footer{padding:20px 16px 30px;text-align:center;font-size:12px;color:var(--text-mute);letter-spacing:0.3px;line-height:1.7}
 .footer a{color:var(--primary);text-decoration:none}
 .footer .heart{color:#e63946}
 
@@ -151,8 +155,8 @@ ul.simple li strong{color:var(--text);font-weight:600;margin-right:6px;flex-shri
   <div class="day-card">
     <span class="dc-day">D2</span>
     <span class="dc-date">9/25 <span class="dow">五</span></span>
-    <div class="dc-title">京都自由活動</div>
-    <div class="dc-detail">自由活動</div>
+    <div class="dc-title">京都 · <span class="hl">自由活動</span></div>
+    <div class="dc-detail"><span class="hl">自由活動</span></div>
     <div class="dc-stay">OMO5 京都三條</div>
   </div>
 
@@ -168,7 +172,7 @@ ul.simple li strong{color:var(--text);font-weight:600;margin-right:6px;flex-shri
     <span class="dc-day">D4</span>
     <span class="dc-date">9/27 <span class="dow">日</span></span>
     <div class="dc-title">京都 → 金澤</div>
-    <div class="dc-detail">雷鳥號 → 敦賀換北陸新幹線 · <strong>下午金澤自由活動</strong>(近江町 / 兼六園 / 21 美 / 東茶屋街)· 晚餐焼肉 Ichibo</div>
+    <div class="dc-detail">雷鳥號 → 敦賀換北陸新幹線 · 下午<span class="hl">金澤自由活動</span>(近江町 / 兼六園 / 21 美 / 東茶屋街)· 晚餐焼肉 Ichibo</div>
     <div class="dc-stay">Dormy Inn 金澤</div>
   </div>
 
@@ -208,7 +212,7 @@ ul.simple li strong{color:var(--text);font-weight:600;margin-right:6px;flex-shri
     <span class="dc-day">D9</span>
     <span class="dc-date">10/2 <span class="dow">五</span></span>
     <div class="dc-title">長野 → 東京</div>
-    <div class="dc-detail">北陸新幹線 かがやき 506(10:14 → 11:36)· 東京自由活動</div>
+    <div class="dc-detail">北陸新幹線 かがやき 506(10:14 → 11:36)· <span class="hl">東京自由活動</span></div>
     <div class="dc-stay tbd">⚠️ TBD</div>
   </div>
 
@@ -216,7 +220,7 @@ ul.simple li strong{color:var(--text);font-weight:600;margin-right:6px;flex-shri
     <span class="dc-day">D10</span>
     <span class="dc-date">10/3 <span class="dow">六</span></span>
     <div class="dc-title">東京</div>
-    <div class="dc-detail">白天自由活動 · 18:00 <strong>屋形船晴海屋慶功宴 🎉</strong></div>
+    <div class="dc-detail"><span class="hl">白天自由活動</span> · 18:00 <strong>屋形船晴海屋慶功宴 🎉</strong></div>
     <div class="dc-stay tbd">(同上)</div>
   </div>
 
