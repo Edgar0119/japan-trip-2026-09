@@ -203,7 +203,22 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .cal-osaka{background:#16a34a}
 .cal-kix{background:#0d9488}
 .cal-kyoto{background:#6f4e37}
-.cal-kanazawa{background:#0d9488}
+.cal-kanazawa{
+  background:
+    /* 第三層:細微金粉雜訊(光斑點點)*/
+    radial-gradient(circle at 30% 25%,rgba(255,250,220,0.55) 0%,rgba(255,250,220,0) 22%),
+    radial-gradient(circle at 75% 70%,rgba(255,240,180,0.45) 0%,rgba(255,240,180,0) 28%),
+    radial-gradient(circle at 20% 80%,rgba(180,130,40,0.35) 0%,rgba(180,130,40,0) 30%),
+    /* 第二層:箔片裂紋(斜向細紋)*/
+    repeating-linear-gradient(115deg,rgba(255,255,255,0.08) 0px,rgba(255,255,255,0.08) 1px,transparent 1px,transparent 6px),
+    repeating-linear-gradient(25deg,rgba(120,80,20,0.06) 0px,rgba(120,80,20,0.06) 1px,transparent 1px,transparent 9px),
+    /* 第一層:金箔本體斜光漸層 */
+    linear-gradient(135deg,#b8862c 0%,#e8c364 25%,#fcdf86 45%,#f5cd5e 60%,#c4922f 85%,#8c6818 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.5),inset 0 -1px 0 rgba(80,50,10,0.4),inset 0 0 0 1px rgba(140,100,30,0.3);
+  color:#3d2817 !important;
+  text-shadow:0 1px 0 rgba(255,250,220,0.6)
+}
+.cal-kanazawa .cal-corner,.cal-kanazawa .cal-corner-tl{color:#3d2817;text-shadow:0 1px 0 rgba(255,250,220,0.6)}
 .cal-nishiho{background:#064e3b}
 .cal-alps{background:#dc6e5e}
 .cal-tsugaike{background:#ca8a04}
@@ -211,15 +226,39 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .cal-nagano{background:#ea6a2a}
 .cal-split-hakuba-nagano{background:linear-gradient(135deg,#ca8a04 0 70%,#ea6a2a 70% 100%);position:relative}
 .cal-split-nagano-tokyo{background:linear-gradient(135deg,#ea6a2a 0 30%,#7c3aed 30% 100%);position:relative}
-.cal-split-kanazawa-nishiho{background:linear-gradient(135deg,#0d9488 0 30%,#064e3b 30% 100%);position:relative}
+.cal-split-kanazawa-nishiho{
+  background:
+    linear-gradient(135deg,transparent 0 30%,#064e3b 30% 100%),
+    radial-gradient(circle at 15% 20%,rgba(255,250,220,0.5) 0%,rgba(255,250,220,0) 18%),
+    repeating-linear-gradient(115deg,rgba(255,255,255,0.08) 0px,rgba(255,255,255,0.08) 1px,transparent 1px,transparent 6px),
+    linear-gradient(135deg,#b8862c 0%,#e8c364 20%,#fcdf86 35%,#c4922f 60%,#8c6818 100%);
+  position:relative
+}
+.cal-split-kanazawa-nishiho .cal-corner-tl{color:#3d2817;text-shadow:0 1px 0 rgba(255,250,220,0.6)}
 .cal-split-nishiho-alps{background:linear-gradient(135deg,#064e3b 0 30%,#dc6e5e 30% 100%);position:relative}
 .cal-split-alps-tsugaike{background:linear-gradient(135deg,#dc6e5e 0 30%,#ca8a04 30% 100%);position:relative}
 .cal-return{background:#475569}
 .cal-split-taipei-kyoto{background:linear-gradient(135deg,#be123c 0 70%,#6f4e37 70% 100%);position:relative}
 .cal-split-tokyo-taipei{background:linear-gradient(135deg,#7c3aed 0 50%,#be123c 50% 100%);position:relative}
 .cal-split-kyoto-taipei{background:linear-gradient(135deg,#6f4e37 0 70%,#be123c 70% 100%);position:relative}
-.cal-split-kyoto-kanazawa{background:linear-gradient(135deg,#6f4e37 0 30%,#0d9488 30% 100%);position:relative}
-.cal-split-kanazawa-kyoto{background:linear-gradient(135deg,#0d9488 0 30%,#6f4e37 30% 100%);position:relative}
+.cal-split-kyoto-kanazawa{
+  background:
+    linear-gradient(135deg,#6f4e37 0 30%,transparent 30% 100%),
+    radial-gradient(circle at 75% 70%,rgba(255,240,180,0.45) 0%,rgba(255,240,180,0) 25%),
+    repeating-linear-gradient(115deg,rgba(255,255,255,0.08) 0px,rgba(255,255,255,0.08) 1px,transparent 1px,transparent 6px),
+    linear-gradient(135deg,#8c6818 0%,#c4922f 30%,#fcdf86 60%,#e8c364 80%,#b8862c 100%);
+  position:relative
+}
+.cal-split-kyoto-kanazawa .cal-date,.cal-split-kyoto-kanazawa .cal-loc{color:#3d2817;text-shadow:0 1px 0 rgba(255,250,220,0.6)}
+.cal-split-kanazawa-kyoto{
+  background:
+    linear-gradient(135deg,transparent 0 30%,#6f4e37 30% 100%),
+    radial-gradient(circle at 15% 20%,rgba(255,250,220,0.5) 0%,rgba(255,250,220,0) 18%),
+    repeating-linear-gradient(115deg,rgba(255,255,255,0.08) 0px,rgba(255,255,255,0.08) 1px,transparent 1px,transparent 6px),
+    linear-gradient(135deg,#b8862c 0%,#e8c364 20%,#fcdf86 35%,#c4922f 60%,#8c6818 100%);
+  position:relative
+}
+.cal-split-kanazawa-kyoto .cal-corner-tl{color:#3d2817;text-shadow:0 1px 0 rgba(255,250,220,0.6)}
 .cal-corner{position:absolute;bottom:4px;right:5px;font-size:9px;line-height:1;font-weight:500}
 .cal-corner-tl{position:absolute;top:4px;left:5px;font-size:9px;line-height:1;font-weight:500}
 .hero-stay{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:10px;position:relative;isolation:isolate;transition:transform 0.3s ease,box-shadow 0.3s ease,background-color 0.4s ease,border-color 0.4s ease}
