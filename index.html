@@ -168,6 +168,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .footer{padding:24px 20px;text-align:center;background:var(--bg);font-size:12px;color:var(--text-mute)}
 .footer .heart{color:#e57373}
 .flight-card{background:var(--flight-bg);border:1px solid var(--flight-border);border-radius:12px;padding:14px;margin-bottom:10px}
+.flight-card-with-media{padding:0;overflow:hidden}
+.flight-card-with-media .flight-card-body{padding:14px}
+.flight-card-with-media .carousel.flight-card-carousel{margin:0;background:#0b1220}
+.flight-card-with-media .carousel-item{aspect-ratio:16/10}
+.flight-card-with-media .carousel-item img{transition:none}
 .flight-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .flight-icon{background:var(--flight-icon-bg);color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .flight-icon svg{width:16px;height:16px}
@@ -634,25 +639,65 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     </div>
   </div>
 
-  <div class="flight-card">
-    <div class="flight-header">
-      <div class="flight-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+  <div class="flight-card flight-card-with-media">
+    <div class="carousel flight-card-carousel" data-carousel>
+      <div class="carousel-track">
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/tango-kuromatsu-1.jpg">
+          <img src="images/tango-kuromatsu-1.jpg" alt="丹後黑松號 車內木製酒吧座席" loading="lazy">
+          <span class="carousel-caption">Interior · 車內木造酒吧</span>
+        </div>
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/tango-kuromatsu-2.jpg">
+          <img src="images/tango-kuromatsu-2.jpg" alt="丹後黑松號 黑色復古車身 KURO-MATSU" loading="lazy">
+          <span class="carousel-caption">KURO-MATSU · 黑色車身</span>
+        </div>
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/tango-kuromatsu-3.jpg">
+          <img src="images/tango-kuromatsu-3.jpg" alt="丹後半島海岸線" loading="lazy">
+          <span class="carousel-caption">Seaside · 丹後半島海景</span>
+        </div>
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/tango-kuromatsu-4.jpg">
+          <img src="images/tango-kuromatsu-4.jpg" alt="鮮魚餐酒吧 舞鶴漁港海鮮拼盤" loading="lazy">
+          <span class="carousel-caption">Bar · 鮮魚餐酒吧</span>
+        </div>
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/tango-kuromatsu-5.jpg">
+          <img src="images/tango-kuromatsu-5.jpg" alt="由良川跨海鐵橋 鐵道風景" loading="lazy">
+          <span class="carousel-caption">Bridge · 由良川跨海鐵橋</span>
+        </div>
+        <div class="carousel-item" onclick="event.preventDefault();openLightbox(this)" data-full="images/tango-kuromatsu-6.jpg">
+          <img src="images/tango-kuromatsu-6.jpg" alt="丹後黑松號 駅停泊外觀" loading="lazy">
+          <span class="carousel-caption">Station · 駅停泊外觀</span>
+        </div>
       </div>
-      <div>
-        <div class="flight-title">丹後黑松號 · 列車酒吧行程</div>
-        <div style="font-size:11px;color:var(--text-soft);margin-top:1px">京都丹後鉄道 · 觀光列車 · 鮮魚餐酒吧 · 跨海鐵橋</div>
+      <span class="carousel-hint">← Swipe →</span>
+      <span class="carousel-counter" data-counter>1 / 6</span>
+      <div class="carousel-dots" role="tablist" data-dots>
+        <button class="carousel-dot is-active" type="button" aria-label="第 1 張" data-idx="0"></button>
+        <button class="carousel-dot" type="button" aria-label="第 2 張" data-idx="1"></button>
+        <button class="carousel-dot" type="button" aria-label="第 3 張" data-idx="2"></button>
+        <button class="carousel-dot" type="button" aria-label="第 4 張" data-idx="3"></button>
+        <button class="carousel-dot" type="button" aria-label="第 5 張" data-idx="4"></button>
+        <button class="carousel-dot" type="button" aria-label="第 6 張" data-idx="5"></button>
       </div>
     </div>
-    <div class="flight-route">
-      <div class="flight-endpoint">
-        <div class="flight-airport">天橋立 AMANOHASHIDATE</div>
-        <div class="flight-time-large">16:05</div>
+    <div class="flight-card-body">
+      <div class="flight-header">
+        <div class="flight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+        </div>
+        <div>
+          <div class="flight-title">丹後黑松號 · 列車酒吧行程</div>
+          <div style="font-size:11px;color:var(--text-soft);margin-top:1px">京都丹後鉄道 · 觀光列車 · 鮮魚餐酒吧 · 跨海鐵橋</div>
+        </div>
       </div>
-      <div class="flight-arrow">🚂</div>
-      <div class="flight-endpoint" style="text-align:right">
-        <div class="flight-airport">西舞鶴 NISHI-MAIZURU</div>
-        <div class="flight-time-large">18:05</div>
+      <div class="flight-route">
+        <div class="flight-endpoint">
+          <div class="flight-airport">天橋立 AMANOHASHIDATE</div>
+          <div class="flight-time-large">16:05</div>
+        </div>
+        <div class="flight-arrow">🚂</div>
+        <div class="flight-endpoint" style="text-align:right">
+          <div class="flight-airport">西舞鶴 NISHI-MAIZURU</div>
+          <div class="flight-time-large">18:05</div>
+        </div>
       </div>
     </div>
   </div>
