@@ -86,6 +86,26 @@ ul.simple li strong{color:var(--text);font-weight:600;margin-right:7px;flex-shri
 .todo-list li:last-child{border-bottom:none}
 .todo-list li:nth-child(even){background:var(--row-alt)}
 
+/* Booking cards (餐廳/票券/包車/已搞定) */
+.bk-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:9px;display:flex;flex-direction:column;gap:5px}
+.bk-card:nth-child(even){background:var(--row-alt)}
+.bk-card .bk-when{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--primary);font-weight:700;letter-spacing:0.3px}
+.bk-card .bk-when .bk-dow{color:var(--text-mute);font-weight:500;font-size:13px}
+.bk-card .bk-title{font-size:16.5px;font-weight:600;color:var(--text);line-height:1.4;margin-top:2px}
+.bk-card .bk-title .emoji{margin-right:3px}
+.bk-card .bk-note{font-size:14.5px;color:var(--text-soft);line-height:1.6;margin-top:2px}
+.bk-card .bk-note strong{color:var(--text);font-weight:600}
+.bk-card .bk-plat{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text-soft);background:var(--surface-2);border:1px solid var(--border-soft);padding:4px 10px;border-radius:8px;margin-top:6px;align-self:flex-start;font-weight:500}
+.bk-card .bk-plat::before{content:"🔗";font-size:11px}
+
+.bk-done{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.bk-done li{padding:11px 16px;border-bottom:1px solid var(--border-soft);font-size:14.5px;color:var(--text-soft);display:flex;align-items:center;gap:10px;line-height:1.5;list-style:none}
+.bk-done li:last-child{border-bottom:none}
+.bk-done li:nth-child(even){background:var(--row-alt)}
+.bk-done li::before{content:"✅";font-size:14px;flex-shrink:0;line-height:1}
+.bk-done li.warn{color:var(--stay-fg)}
+.bk-done li.warn::before{content:"⚠️"}
+
 .footer{padding:22px 16px 32px;text-align:center;font-size:13px;color:var(--text-mute);letter-spacing:0.3px;line-height:1.7}
 .footer a{color:var(--primary);text-decoration:none}
 .footer .heart{color:#e63946}
@@ -266,6 +286,104 @@ ul.simple li strong{color:var(--text);font-weight:600;margin-right:7px;flex-shri
     <li>10/3 東京白天具體行程</li>
     <li>10/4 羽田機場交通(京急 / 利木津)</li>
     <li>11 天的天氣 badge(目前都 data-empty)</li>
+  </ul>
+</div>
+
+<div class="section">
+  <div class="section-title">🍽️ 餐廳訂位 · 4 間</div>
+
+  <div class="bk-card">
+    <span class="bk-when">9/26 <span class="bk-dow">六</span> · 19:30</span>
+    <div class="bk-title"><span class="emoji">🍲</span>鴨川納涼床 · 壽喜燒</div>
+    <div class="bk-note">京都夏季限定「川床」· 9 月底末班 · 8 人要早訂</div>
+  </div>
+
+  <div class="bk-card">
+    <span class="bk-when">9/27 <span class="bk-dow">日</span> · 20:00</span>
+    <div class="bk-title"><span class="emoji">🥩</span>焼肉 Ichibo 金沢駅前店</div>
+    <div class="bk-note">全家 8 人 · Dormy Inn 步行 2 分</div>
+  </div>
+
+  <div class="bk-card">
+    <span class="bk-when">9/29 <span class="bk-dow">二</span> · 12:30</span>
+    <div class="bk-title"><span class="emoji">🥩</span>焼肉 SOUL · 松本</div>
+    <div class="bk-note">下山後午餐 · 8 人</div>
+  </div>
+
+  <div class="bk-card">
+    <span class="bk-when">10/3 <span class="bk-dow">六</span> · 17:30 報到 / 18:00 開船</span>
+    <div class="bk-title"><span class="emoji">🛥️</span>屋形船晴海屋 · 慶功宴</div>
+    <div class="bk-note"><strong>船不等人</strong> · 全 11 品和食套餐 + 飲み放題 · 沿隅田川夜景巡航 · 晴空塔 × 彩虹大橋</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">🚆 票券預訂</div>
+
+  <div class="bk-card">
+    <span class="bk-when">9/27 <span class="bk-dow">日</span></span>
+    <div class="bk-title">京都 → 敦賀 → 金澤</div>
+    <div class="bk-note">雷鳥號 + 北陸新幹線 指定席 · 約 ¥7,500/人 × 8 · 週日早班常滿,出發前 1 週訂</div>
+    <span class="bk-plat">e5489 或 SmartEX</span>
+  </div>
+
+  <div class="bk-card">
+    <span class="bk-when">10/2 <span class="bk-dow">五</span> · 10:14 → 11:36</span>
+    <div class="bk-title">北陸新幹線 かがやき 506</div>
+    <div class="bk-note">長野 → 東京 · ¥8,250 起 × 8 · 全車指定席,8 人要靠攏劃位</div>
+    <span class="bk-plat">e5489 或 JR-EAST</span>
+  </div>
+
+  <div class="bk-card">
+    <span class="bk-when">9/26 <span class="bk-dow">六</span> · 14:48 → 15:50</span>
+    <div class="bk-title"><span class="emoji">🚂</span>丹後赤松 4 號 · 海上火車</div>
+    <div class="bk-note">天橋立 → 西舞鶴 · 全車指定席 · 一天只有 4 班 · 週末搶手</div>
+    <span class="bk-plat">willer-travel.com 或丹後鉄道</span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">🚐 包車 / 遊船 / 纜車 / 租車</div>
+
+  <div class="bk-card">
+    <span class="bk-when">9/26 <span class="bk-dow">六</span> · 08:00 起</span>
+    <div class="bk-title"><span class="emoji">🚐</span>京都 → 伊根 → 天橋立 → 西舞鶴 包車</div>
+    <div class="bk-note">8 人包車 · 含司機在西舞鶴接回京都(走丹後赤松後接回)</div>
+  </div>
+
+  <div class="bk-card">
+    <span class="bk-when">9/26 <span class="bk-dow">六</span> · ~10:00</span>
+    <div class="bk-title"><span class="emoji">⛴️</span>伊根灣遊覽船 · 看舟屋</div>
+    <div class="bk-note">官網訂或現場買 · 旺季週六建議先預約</div>
+  </div>
+
+  <div class="bk-card">
+    <span class="bk-when">9/28 <span class="bk-dow">一</span> · ~12:15</span>
+    <div class="bk-title"><span class="emoji">🚠</span>新穗高纜車 + 鍋平停車場</div>
+    <div class="bk-note">8 人來回票 + 鍋平高原登山者駐車場 2 車位 · <strong>停車場一定要先預約</strong>,沒預約現場會被請走</div>
+    <span class="bk-plat">shinhotaka-ropeway.jp</span>
+  </div>
+
+  <div class="bk-card">
+    <span class="bk-when">9/28 <span class="bk-dow">一</span> 起 · 4 天</span>
+    <div class="bk-title"><span class="emoji">🚗</span>Toyota Rent a Car · 兩台車</div>
+    <div class="bk-note">金沢駅西口取 → 長野店還(<strong>異地還車</strong>)· 確認異地費 + 國際駕照備好</div>
+    <span class="bk-plat">Toyota Rent a Car 官網</span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">✅ 已搞定 / 不用訂</div>
+  <ul class="bk-done">
+    <li>樂桃 MM026 · 9/24 TPE → KIX</li>
+    <li>長榮 BR189 · 10/4 HND → TSA</li>
+    <li>OMO5 京都三條 · 9/24–26(3 晚)</li>
+    <li>Dormy Inn 金澤 · 9/27</li>
+    <li>西穂山荘 · 9/28</li>
+    <li>星野 界 阿爾卑斯 · 9/29</li>
+    <li>白馬飯店 · 9/30</li>
+    <li>相鐵 FRESA INN 長野 · 10/1</li>
+    <li class="warn">東京 10/2 + 10/3 兩晚住宿 · 還沒訂</li>
   </ul>
 </div>
 
