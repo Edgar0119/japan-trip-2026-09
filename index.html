@@ -128,9 +128,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .day-header.is-stuck .day-info h2{font-size:14px}
 .day-header.is-stuck .day-info .theme{display:none}
 .day-header.is-stuck .weather-badge .wb-rain-grid{display:none}
-.day-num{background:var(--primary);color:#fff;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;flex-shrink:0;line-height:1.1;text-align:center;flex-direction:column;transition:width 0.2s ease,height 0.2s ease}
+.day-num{background:var(--primary);color:#fff;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;flex-shrink:0;line-height:1.1;text-align:center;flex-direction:column;transition:width 0.2s ease,height 0.2s ease;position:relative}
 .day-num .date{font-size:11px;font-weight:600}
 .day-num .dow{font-size:10px;opacity:0.9;margin-top:1px}
+.day-num .d-tag{position:absolute;top:-4px;right:-8px;background:var(--time-bg);color:var(--time-fg);font-size:10px;font-weight:700;letter-spacing:0.3px;padding:2px 5px;border-radius:8px;line-height:1.1;border:1.5px solid var(--surface);box-shadow:0 1px 3px rgba(0,0,0,0.12);font-variant-numeric:tabular-nums;transition:transform 0.2s ease,opacity 0.2s ease}
+.day-header.is-stuck .day-num .d-tag{transform:scale(0.85);top:-3px;right:-6px}
 .day-info{flex:1;min-width:0}
 .day-info h2{font-size:16px;font-weight:600;color:var(--text);transition:font-size 0.2s ease}
 .day-info .theme{font-size:12px;color:var(--text-soft);margin-top:1px}
@@ -475,7 +477,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 
 <div class="day" id="day-24">
   <div class="day-header">
-    <div class="day-num"><div class="date">9/24</div><div class="dow">四</div></div>
+    <div class="day-num"><span class="d-tag">D1</span><div class="date">9/24</div><div class="dow">四</div></div>
     <div class="day-info">
       <h2>桃機 → 京都</h2>
       <div class="theme">關西機場入境 · 進京都</div>
@@ -538,7 +540,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 
 <div class="day" id="day-25">
   <div class="day-header">
-    <div class="day-num"><div class="date">9/25</div><div class="dow">五</div></div>
+    <div class="day-num"><span class="d-tag">D2</span><div class="date">9/25</div><div class="dow">五</div></div>
     <div class="day-info">
       <h2>京都</h2>
       <div class="theme">自由活動</div>
@@ -573,7 +575,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 
 <div class="day" id="day-26">
   <div class="day-header">
-    <div class="day-num"><div class="date">9/26</div><div class="dow">六</div></div>
+    <div class="day-num"><span class="d-tag">D3</span><div class="date">9/26</div><div class="dow">六</div></div>
     <div class="day-info">
       <h2>京都 · 天橋立一日遊</h2>
       <div class="theme">包車 · 伊根舟屋 → 天橋立 → 丹後黑松</div>
@@ -800,7 +802,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 
 <div class="day" id="day-27">
   <div class="day-header">
-    <div class="day-num"><div class="date">9/27</div><div class="dow">日</div></div>
+    <div class="day-num"><span class="d-tag">D4</span><div class="date">9/27</div><div class="dow">日</div></div>
     <div class="day-info">
       <h2>京都 → 金澤</h2>
       <div class="theme">雷鳥號 + 北陸新幹線</div>
@@ -968,7 +970,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 
 <div class="day" id="day-28">
   <div class="day-header">
-    <div class="day-num"><div class="date">9/28</div><div class="dow">一</div></div>
+    <div class="day-num"><span class="d-tag">D5</span><div class="date">9/28</div><div class="dow">一</div></div>
     <div class="day-info">
       <h2>金澤 → 西穂</h2>
       <div class="theme">新穗高纜車 · 西穂山荘</div>
@@ -1164,7 +1166,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 
 <div class="day" id="day-29">
   <div class="day-header">
-    <div class="day-num"><div class="date">9/29</div><div class="dow">二</div></div>
+    <div class="day-num"><span class="d-tag">D6</span><div class="date">9/29</div><div class="dow">二</div></div>
     <div class="day-info">
       <h2>西穂 → 界 阿爾卑斯</h2>
       <div class="theme">下山 + 開車到星野溫泉</div>
@@ -1308,7 +1310,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 
 <div class="day" id="day-30">
   <div class="day-header">
-    <div class="day-num"><div class="date">9/30</div><div class="dow">三</div></div>
+    <div class="day-num"><span class="d-tag">D7</span><div class="date">9/30</div><div class="dow">三</div></div>
     <div class="day-info">
       <h2>界 阿爾卑斯 → 栂池</h2>
       <div class="theme">退房 + 栂池纜車 + 自然園</div>
@@ -1477,7 +1479,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 
 <div class="day" id="day-oct-1">
   <div class="day-header">
-    <div class="day-num"><div class="date">10/1</div><div class="dow">四</div></div>
+    <div class="day-num"><span class="d-tag">D8</span><div class="date">10/1</div><div class="dow">四</div></div>
     <div class="day-info">
       <h2>白馬八方</h2>
       <div class="theme">八方池健行 · 高山絕景</div>
@@ -1669,7 +1671,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 
 <div class="day" id="day-oct-2">
   <div class="day-header">
-    <div class="day-num"><div class="date">10/2</div><div class="dow">五</div></div>
+    <div class="day-num"><span class="d-tag">D9</span><div class="date">10/2</div><div class="dow">五</div></div>
     <div class="day-info">
       <h2>長野 → 東京</h2>
       <div class="theme">北陸新幹線 光輝 · 1h22m</div>
@@ -1742,7 +1744,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 
 <div class="day" id="day-oct-3">
   <div class="day-header">
-    <div class="day-num"><div class="date">10/3</div><div class="dow">六</div></div>
+    <div class="day-num"><span class="d-tag">D10</span><div class="date">10/3</div><div class="dow">六</div></div>
     <div class="day-info">
       <h2>東京</h2>
       <div class="theme">最後一晚 · 屋形船慶功宴</div>
@@ -1805,7 +1807,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 
 <div class="day" id="day-oct-4">
   <div class="day-header">
-    <div class="day-num"><div class="date">10/4</div><div class="dow">日</div></div>
+    <div class="day-num"><span class="d-tag">D11</span><div class="date">10/4</div><div class="dow">日</div></div>
     <div class="day-info">
       <h2>羽田 → 台北</h2>
       <div class="theme">賦歸 · 長榮 BR189</div>
