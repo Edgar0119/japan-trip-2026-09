@@ -133,6 +133,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .day-num .dow{font-size:10px;opacity:0.9;margin-top:1px}
 .day-num .d-tag{position:absolute;top:-7px;right:-12px;background:var(--time-bg);color:var(--time-fg);font-size:10px;font-weight:700;letter-spacing:0.3px;padding:2px 5px;border-radius:8px;line-height:1.1;border:1.5px solid var(--surface);box-shadow:0 1px 3px rgba(0,0,0,0.12);font-variant-numeric:tabular-nums;transition:transform 0.2s ease,top 0.2s ease,right 0.2s ease;pointer-events:none;z-index:2}
 .day-header.is-stuck .day-num .d-tag{transform:scale(0.8);top:-9px;right:-14px;transform-origin:top right}
+.kai-badge{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:1.5em;height:1.5em;border-radius:50%;background:#dc6e5e;color:#fff;line-height:1;vertical-align:-0.35em;margin:0 2px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;box-shadow:0 1px 2px rgba(0,0,0,0.12);flex-shrink:0}
+.kai-badge .kai-kanji{font-size:0.62em;font-weight:500;letter-spacing:-0.02em;margin-top:0.05em}
+.kai-badge .kai-romaji{font-size:0.28em;letter-spacing:0.15em;font-weight:600;margin-top:-0.05em;opacity:0.95}
 .day-info{flex:1;min-width:0}
 .day-info h2{font-size:16px;font-weight:600;color:var(--text);transition:font-size 0.2s ease}
 .day-info .theme{font-size:12px;color:var(--text-soft);margin-top:1px}
@@ -1207,7 +1210,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
   <div class="day-header">
     <div class="day-num"><span class="d-tag">D6</span><div class="date">9/29</div><div class="dow">二</div></div>
     <div class="day-info">
-      <h2>西穂 → 界 阿爾卑斯</h2>
+      <h2>西穂 → <span class="kai-badge" aria-label="星野集團 界 KAI"><span class="kai-kanji">界</span><span class="kai-romaji">KAI</span></span> 阿爾卑斯</h2>
       <div class="theme">下山 + 開車到星野溫泉</div>
     </div>
     <div class="weather-badge" data-empty data-date="2026-09-29" data-lat="36.1196" data-lon="137.6437" data-loc="界 阿爾卑斯"><div class="wb-row"><span class="wb-loc">界 アルプス</span><span><span class="wb-main">—</span></span></div></div>
