@@ -127,7 +127,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .day-header.is-stuck .day-num{width:34px;height:34px}
 .day-header.is-stuck .day-info h2{font-size:14px}
 .day-header.is-stuck .day-info .theme{display:none}
-.day-header.is-stuck .weather-badge .wb-rain-grid{display:none}
+.day-header.is-stuck .weather-badge .wb-rain-grid{margin-top:2px}
+.day-header.is-stuck .weather-badge .wb-rain-cell{padding:2px 1px 3px}
 .day-num{background:var(--primary);color:#fff;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;flex-shrink:0;line-height:1.1;text-align:center;flex-direction:column;transition:width 0.2s ease,height 0.2s ease;position:relative}
 .day-num .date{font-size:11px;font-weight:600}
 .day-num .dow{font-size:10px;opacity:0.9;margin-top:1px}
@@ -153,6 +154,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .weather-badge .wb-rain-cell.wb-pct-high .wb-pct{color:var(--stay-fg)}
 .weather-badge[data-empty] .wb-main{color:var(--text-mute);font-weight:500}
 .weather-badge[data-empty] .wb-rain-grid{display:none}
+.weather-badge[data-state="loading"] .wb-main{animation:weather-pulse 1.2s ease-in-out infinite}
+@keyframes weather-pulse{0%,100%{opacity:0.45}50%{opacity:1}}
 .spot{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:9px 14px 10px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start}
 .spot-time{background:var(--time-bg);color:var(--time-fg);font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;flex-shrink:0;letter-spacing:0.3px;min-width:56px;text-align:center}
 .spot-body{flex:1;min-width:0}
@@ -172,6 +175,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .divider{height:8px;background:var(--bg);margin:0 -16px}
 .footer{padding:24px 20px;text-align:center;background:var(--bg);font-size:12px;color:var(--text-mute)}
 .footer .heart{color:#e57373}
+.footer a{color:inherit;text-decoration:underline;text-underline-offset:2px}
 .flight-card{background:var(--flight-bg);border:1px solid var(--flight-border);border-radius:12px;padding:14px;margin-bottom:10px}
 .flight-card-with-media{padding:0;overflow:hidden}
 .flight-card-with-media .flight-card-body{padding:14px}
@@ -1013,7 +1017,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
       <h2>金澤 → 西穂</h2>
       <div class="theme">新穗高纜車 · 西穂山荘</div>
     </div>
-    <div class="weather-badge" data-empty data-date="2026-09-28" data-lat="36.578" data-lon="136.648" data-loc="金澤"><div class="wb-row"><span class="wb-loc">金澤</span><span><span class="wb-main">—</span></span></div></div>
+    <div class="weather-badge" data-empty data-date="2026-09-28" data-lat="36.265278" data-lon="137.6175" data-loc="西穗山莊"><div class="wb-row"><span class="wb-loc">西穗山莊</span><span><span class="wb-main">—</span></span></div></div>
   </div>
 
   <a class="hero-stay" href="https://maps.app.goo.gl/BdPUAjGixSEpYPc6A" target="_blank" rel="noopener">
@@ -1949,7 +1953,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 <div class="footer">
   日本 11 日遊 <span class="heart">♥</span><br>
   9/24 – 10/4 · 點按鈕直接開啟 Google Maps<br>
-  <span style="opacity:0.6;font-size:11px">最後更新 2026-08-31</span>
+  <span style="opacity:0.72;font-size:11px">天氣資料來源：<a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> · 預報僅供參考</span><br>
+  <span style="opacity:0.6;font-size:11px">最後更新 2026-09-20</span>
 </div>
 
 </div>
@@ -1960,6 +1965,159 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 </div>
 <script>
 (function(){
+  var WEATHER_CODES={
+    0:["☀","晴"],1:["🌤","晴時多雲"],2:["⛅","多雲"],3:["☁","陰"],
+    45:["🌫","霧"],48:["🌫","霧凇"],51:["🌦","小毛雨"],53:["🌦","毛雨"],
+    55:["🌧","大毛雨"],56:["🌧","凍雨"],57:["🌧","凍雨"],61:["🌦","小雨"],
+    63:["🌧","雨"],65:["🌧","大雨"],66:["🌧","凍小雨"],67:["🌧","凍雨"],
+    71:["🌨","小雪"],73:["🌨","雪"],75:["❄","大雪"],77:["❄","雪粒"],
+    80:["🌦","陣雨"],81:["🌧","陣雨"],82:["⛈","強陣雨"],85:["🌨","陣雪"],
+    86:["❄","強陣雪"],95:["⛈","雷雨"],96:["⛈","雷雨"],99:["⛈","雷雨"]
+  };
+  var WEATHER_CACHE_KEY="trip-2026-09-weather-v1";
+  var WEATHER_CACHE_MS=30*60*1000;
+  var WEATHER_WINDOW_DAYS=7;
+  var WEATHER_SLOT_LABELS=["00–04","04–08","08–12","12–16","16–20","20–24"];
+
+  function dateInTokyo(offsetDays){
+    var shifted=new Date(Date.now()+(offsetDays||0)*86400000);
+    var parts=new Intl.DateTimeFormat("en-US",{
+      timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"
+    }).formatToParts(shifted);
+    var values={};
+    parts.forEach(function(part){values[part.type]=part.value;});
+    return values.year+"-"+values.month+"-"+values.day;
+  }
+
+  function weatherStatus(badge,message,state){
+    var loc=badge.getAttribute("data-loc")||"";
+    badge.setAttribute("data-empty","");
+    badge.setAttribute("data-state",state||"idle");
+    badge.innerHTML='<div class="wb-row"><span class="wb-loc">'+loc+'</span><span><span class="wb-main">'+message+'</span></span></div>';
+  }
+
+  function rainClass(value){
+    if(value===null||typeof value==="undefined"||value<30)return "wb-pct-low";
+    if(value<60)return "wb-pct-mid";
+    return "wb-pct-high";
+  }
+
+  function rainSlots(hourly,date){
+    var buckets=[[],[],[],[],[],[]];
+    if(!hourly||!hourly.time||!hourly.precipitation_probability)return [null,null,null,null,null,null];
+    hourly.time.forEach(function(time,index){
+      if(time.slice(0,10)!==date)return;
+      var hour=parseInt(time.slice(11,13),10);
+      var value=hourly.precipitation_probability[index];
+      if(!isNaN(hour)&&value!==null&&typeof value!=="undefined")buckets[Math.floor(hour/4)].push(value);
+    });
+    return buckets.map(function(values){return values.length?Math.max.apply(null,values):null;});
+  }
+
+  function renderWeather(badge,payload){
+    if(!payload||!payload.daily||!payload.daily.time){
+      weatherStatus(badge,"暫無資料","error");
+      return;
+    }
+    var date=badge.getAttribute("data-date");
+    var dayIndex=payload.daily.time.indexOf(date);
+    if(dayIndex<0){
+      weatherStatus(badge,"暫無資料","error");
+      return;
+    }
+    var code=payload.daily.weather_code[dayIndex];
+    var weather=WEATHER_CODES[code]||["•","天氣預報"];
+    var high=Math.round(payload.daily.temperature_2m_max[dayIndex]);
+    var low=Math.round(payload.daily.temperature_2m_min[dayIndex]);
+    var loc=badge.getAttribute("data-loc")||"";
+    var slots=rainSlots(payload.hourly,date);
+    var cells=slots.map(function(value,index){
+      var pct=value===null?"—":Math.round(value)+"%";
+      return '<div class="wb-rain-cell '+rainClass(value)+'"><span class="wb-slot">'+WEATHER_SLOT_LABELS[index]+'</span><span class="wb-pct">'+pct+'</span></div>';
+    }).join("");
+    badge.removeAttribute("data-empty");
+    badge.setAttribute("data-state","ready");
+    badge.setAttribute("title","Open-Meteo 即時預報；下方為每 4 小時區間的最高降雨機率");
+    badge.innerHTML='<div class="wb-row"><span class="wb-loc">'+loc+'</span><span><span class="wb-main">'+weather[0]+' '+high+'°/'+low+'°</span><span class="wb-label">'+weather[1]+'</span></span></div><div class="wb-rain-grid">'+cells+'</div>';
+  }
+
+  function cachedWeather(signature){
+    try{
+      var cached=JSON.parse(localStorage.getItem(WEATHER_CACHE_KEY)||"null");
+      if(cached&&cached.signature===signature&&Array.isArray(cached.data))return cached;
+    }catch(e){}
+    return null;
+  }
+
+  function storeWeather(signature,data){
+    try{
+      localStorage.setItem(WEATHER_CACHE_KEY,JSON.stringify({signature:signature,fetchedAt:Date.now(),data:data}));
+    }catch(e){}
+  }
+
+  function loadWeather(){
+    if(!window.fetch||!window.Intl)return;
+    var today=dateInTokyo(0);
+    var lastDate=dateInTokyo(WEATHER_WINDOW_DAYS);
+    var badges=Array.prototype.slice.call(document.querySelectorAll(".weather-badge[data-date]"));
+    var active=[];
+    badges.forEach(function(badge){
+      var date=badge.getAttribute("data-date");
+      if(date<today){
+        weatherStatus(badge,"行程已過","past");
+      }else if(date>lastDate){
+        weatherStatus(badge,"等待 7 日預報","future");
+      }else{
+        weatherStatus(badge,"載入中…","loading");
+        active.push(badge);
+      }
+    });
+    if(!active.length)return;
+
+    var locations=[];
+    var locationIndex={};
+    active.forEach(function(badge){
+      var lat=badge.getAttribute("data-lat");
+      var lon=badge.getAttribute("data-lon");
+      var key=lat+","+lon;
+      if(typeof locationIndex[key]==="undefined"){
+        locationIndex[key]=locations.length;
+        locations.push({lat:lat,lon:lon,key:key});
+      }
+      badge.setAttribute("data-weather-index",locationIndex[key]);
+    });
+
+    var signature=today+"|"+locations.map(function(location){return location.key;}).join("|");
+    var cached=cachedWeather(signature);
+    function renderAll(data){
+      active.forEach(function(badge){renderWeather(badge,data[parseInt(badge.getAttribute("data-weather-index"),10)]);});
+    }
+    if(cached&&Date.now()-cached.fetchedAt<WEATHER_CACHE_MS){
+      renderAll(cached.data);
+      return;
+    }
+
+    var params=new URLSearchParams({
+      latitude:locations.map(function(location){return location.lat;}).join(","),
+      longitude:locations.map(function(location){return location.lon;}).join(","),
+      daily:"weather_code,temperature_2m_max,temperature_2m_min",
+      hourly:"precipitation_probability",
+      timezone:"auto",
+      forecast_days:String(WEATHER_WINDOW_DAYS+1)
+    });
+    fetch("https://api.open-meteo.com/v1/forecast?"+params.toString())
+      .then(function(response){if(!response.ok)throw new Error("weather "+response.status);return response.json();})
+      .then(function(data){
+        var normalized=Array.isArray(data)?data:[data];
+        storeWeather(signature,normalized);
+        renderAll(normalized);
+      })
+      .catch(function(){
+        if(cached)renderAll(cached.data);
+        else active.forEach(function(badge){weatherStatus(badge,"暫時無法取得","error");});
+      });
+  }
+
   function closeLightbox(){
     var lb=document.getElementById("lightbox");
     if(!lb)return;
@@ -1977,6 +2135,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     document.body.style.overflow="hidden";
   };
   function bind(){
+    loadWeather();
     var lb=document.getElementById("lightbox");
     var btn=document.getElementById("lightboxClose");
     if(lb)lb.addEventListener("click",function(e){if(e.target===lb)closeLightbox();},false);
