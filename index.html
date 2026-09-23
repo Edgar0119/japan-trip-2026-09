@@ -1090,8 +1090,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
   <div class="spot">
     <div class="spot-time">11:45</div>
     <div class="spot-body">
-      <div class="spot-name">🅿️ 鍋平高原登山者駐車場 · 已訂 2 個車位</div>
-      <div class="spot-desc"><strong>9/28–29 過夜停車已預約完成</strong> · 兩台租車,分成兩筆預約。停好車後走到「しらかば平駅」搭第 2 纜車(雙層車廂、日本唯一)上「西穗高口駅」,全程約 15 分</div>
+      <div class="spot-name">🅿️ 鍋平高原登山者駐車場 · 已訂・已付款 · 2 個車位</div>
+      <div class="spot-desc"><strong>9/28–29 過夜停車已預約並線上付款</strong> · 兩台租車分成兩筆預約,每台 ¥1,000,合計 ¥2,000。停好車後走到「しらかば平駅」搭第 2 纜車(雙層車廂、日本唯一)上「西穗高口駅」,全程約 15 分</div>
       <div class="btn-row">
         <a class="btn btn-nav" href="https://maps.app.goo.gl/h3vQ4N2GwJQkJua89" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1102,7 +1102,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
   </div>
 
   <div class="tip">
-    <strong>✅ 停車場已訂 · 取車後補車牌</strong>
+    <strong>✅ 停車場已訂・已付款 · 取車後補車牌</strong>
     兩個車位皆已透過 <a href="https://nabedaira-tozan.revn.jp/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">登山者專用預約系統</a> 預約完成。9/28 早上取車後,立即回覆停車場來信,補上兩台租車的車牌號碼。
   </div>
 
@@ -1974,9 +1974,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     80:["🌦","陣雨"],81:["🌧","陣雨"],82:["⛈","強陣雨"],85:["🌨","陣雪"],
     86:["❄","強陣雪"],95:["⛈","雷雨"],96:["⛈","雷雨"],99:["⛈","雷雨"]
   };
-  var WEATHER_CACHE_KEY="trip-2026-09-weather-v1";
+  var WEATHER_CACHE_KEY="trip-2026-09-weather-v2";
   var WEATHER_CACHE_MS=30*60*1000;
-  var WEATHER_WINDOW_DAYS=7;
+  var WEATHER_FORECAST_DAYS=16;
   var WEATHER_SLOT_LABELS=["00–04","04–08","08–12","12–16","16–20","20–24"];
 
   function dateInTokyo(offsetDays){
@@ -2022,7 +2022,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     var date=badge.getAttribute("data-date");
     var dayIndex=payload.daily.time.indexOf(date);
     if(dayIndex<0){
-      weatherStatus(badge,"暫無資料","error");
+      weatherStatus(badge,"尚無預報","future");
       return;
     }
     var code=payload.daily.weather_code[dayIndex];
@@ -2058,15 +2058,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
   function loadWeather(){
     if(!window.fetch||!window.Intl)return;
     var today=dateInTokyo(0);
-    var lastDate=dateInTokyo(WEATHER_WINDOW_DAYS);
     var badges=Array.prototype.slice.call(document.querySelectorAll(".weather-badge[data-date]"));
     var active=[];
     badges.forEach(function(badge){
       var date=badge.getAttribute("data-date");
       if(date<today){
         weatherStatus(badge,"行程已過","past");
-      }else if(date>lastDate){
-        weatherStatus(badge,"等待 7 日預報","future");
       }else{
         weatherStatus(badge,"載入中…","loading");
         active.push(badge);
@@ -2103,7 +2100,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
       daily:"weather_code,temperature_2m_max,temperature_2m_min",
       hourly:"precipitation_probability",
       timezone:"auto",
-      forecast_days:String(WEATHER_WINDOW_DAYS+1)
+      forecast_days:String(WEATHER_FORECAST_DAYS)
     });
     fetch("https://api.open-meteo.com/v1/forecast?"+params.toString())
       .then(function(response){if(!response.ok)throw new Error("weather "+response.status);return response.json();})
