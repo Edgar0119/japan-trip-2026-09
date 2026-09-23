@@ -86,9 +86,9 @@ https://docs.google.com/spreadsheets/d/1i3b5ZGu67glJ-WYEgY1N4EzyBIjvj9EfSX5liGgx
 ## 6. 天氣功能
 
 - `index.html` 使用 Open-Meteo，無 API Key。
-- 只載入日本日期「今天至今天 + 7 天」範圍內的行程。
+- 所有尚未過期的行程日期都會嘗試查詢，API 請求使用 Open-Meteo 支援的最長 16 天預報。
 - 每日顯示最高 / 最低溫及 6 個四小時降雨區段。
-- 過期日期不再更新，超出七日範圍則等待預報。
+- 過期日期不再更新；API 尚未回傳的日期顯示「尚無預報」。
 - 9/28 登山日必須使用新穗高／西穂山荘山區座標，不可使用金澤座標。
 - 頁尾保留 Open-Meteo 資料來源與「預報僅供參考」。
 
