@@ -51,7 +51,7 @@ https://docs.google.com/spreadsheets/d/1i3b5ZGu67glJ-WYEgY1N4EzyBIjvj9EfSX5liGgx
 
 已知的現場付款例子包括：
 
-- 西穂山荘四人個室 × 2：現金。
+- 原西穂山荘四人個室 × 2：行程已移除；原預約取消、取消費及退款狀態待確認，不再視為確定的現場住宿付款。
 - 伊根灣遊覽船：現場現金 ¥15,000。
 - 其他項目以 Google Spreadsheet 現況及使用者最新指示為準。
 
@@ -89,7 +89,7 @@ https://docs.google.com/spreadsheets/d/1i3b5ZGu67glJ-WYEgY1N4EzyBIjvj9EfSX5liGgx
 - 所有尚未過期的行程日期都會嘗試查詢，API 請求使用 Open-Meteo 支援的最長 16 天預報。
 - 每日顯示最高 / 最低溫及 6 個四小時降雨區段。
 - 過期日期不再更新；API 尚未回傳的日期顯示「尚無預報」。
-- 9/28 登山日必須使用新穗高／西穂山荘山區座標，不可使用金澤座標。
+- 9/28 已改為高山自由活動，使用高山座標；9/29 白天上高地散策，使用上高地座標。
 - 頁尾保留 Open-Meteo 資料來源與「預報僅供參考」。
 
 ## 7. 驗證方式
@@ -124,4 +124,3 @@ https://docs.google.com/spreadsheets/d/1i3b5ZGu67glJ-WYEgY1N4EzyBIjvj9EfSX5liGgx
 可在 iOS ChatGPT 中將這份文件交給 Codex，並使用：
 
 > 請先完整閱讀 `IOS_CLOUD_HANDOFF.md`、`README.md`、`index.html` 與 `summary.html`。這是 2026 日本家族旅行專案。之後我提供行程或費用時，依交接規則同步更新網站與指定 Google Spreadsheet；不要更新本機 Excel。未經我提供的金額或預約狀態不要猜測。需要發布時建立 PR，並清楚回報是否已合併到 main。
-
