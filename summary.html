@@ -148,6 +148,12 @@ ul.simple li strong{color:var(--text);font-weight:600;margin-right:6px;flex-shri
   .container{margin-top:20px;margin-bottom:20px;border-radius:16px;min-height:auto}
   .hero{border-radius:16px 16px 0 0}
 }
+
+.hotel-photos{grid-column:1 / -1;min-width:0;margin-top:8px;font-size:12px;color:var(--text-soft)}
+.hotel-photos summary{cursor:pointer;color:var(--primary)}
+.hotel-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:8px}
+.hotel-photo-grid a{display:block;min-width:0;color:var(--text-soft);text-decoration:none}
+.hotel-photo-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:6px;margin-bottom:3px}
 </style>
 <script>
 (function(){
@@ -207,6 +213,12 @@ ul.simple li strong{color:var(--text);font-weight:600;margin-right:6px;flex-shri
     <div class="dc-daterow"><span class="dc-day">D5</span><span class="dc-date">9/28 <span class="dow">一</span></span></div>
     <div class="dc-detail">08:30 Toyota 取車 → 09:00 接齊家人開車出發 → 高山附近悠閒散步、自由用餐</div>
     <div class="dc-stay"><strong>hotel around</strong><span>TAKAYAMA</span></div>
+    <details class="hotel-photos"><summary>查看飯店照片（4 張）</summary><div class="hotel-photo-grid">
+      <a href="images/takayama-exterior.jpg" target="_blank" rel="noopener"><img src="images/takayama-exterior.jpg" alt="hotel around TAKAYAMA · 飯店外觀" loading="lazy">飯店外觀</a>
+      <a href="images/takayama-bath.jpg" target="_blank" rel="noopener"><img src="images/takayama-bath.jpg" alt="hotel around TAKAYAMA · 浴場" loading="lazy">浴場</a>
+      <a href="images/takayama-room.jpg" target="_blank" rel="noopener"><img src="images/takayama-room.jpg" alt="hotel around TAKAYAMA · 客房參考" loading="lazy">客房參考</a>
+      <a href="images/takayama-breakfast.jpg" target="_blank" rel="noopener"><img src="images/takayama-breakfast.jpg" alt="hotel around TAKAYAMA · 早餐參考" loading="lazy">早餐參考</a>
+    </div></details>
   </div>
 
   <div class="day-card">
