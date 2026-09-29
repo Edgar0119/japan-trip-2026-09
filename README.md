@@ -3,7 +3,7 @@
 家族日本 11 日遊行程表(2026/9/24 – 10/4)。
 
 - **線上版本**: https://edgar0119.github.io/japan-trip-2026-09/
-- **路線**: 桃機 → 京都 → 金澤 → 高山(hotel around TAKAYAMA)→ 平湯 / 上高地 → 界 阿爾卑斯 → 白馬 → 長野 → 東京
+- **路線**: 桃機 → 京都 → 金澤 → 高山(hotel around TAKAYAMA)→ 平湯 / 上高地 → 界 阿爾卑斯 → 白馬 → 白駒池（白駒莊）→ 佐久平 → 東京
 - **適用**: 手機優先(`max-width: 560px`)
 - **GitHub Pages 部署**: push 到 `main` 即可自動部署
 
